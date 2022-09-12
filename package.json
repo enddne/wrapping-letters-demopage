@@ -1,0 +1,19 @@
+{
+  "name": "wrapping-letters-demopage",
+  "version": "1.0.0",
+  "description": "A very interesting description",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enddne/wrapping-letters-demopage.git"
+  },
+  "author": "srtager555",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/enddne/wrapping-letters-demopage/issues"
+  },
+  "homepage": "https://github.com/enddne/wrapping-letters-demopage#readme"
+}
