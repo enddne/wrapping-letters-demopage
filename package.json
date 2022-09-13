@@ -4,7 +4,9 @@
   "description": "A very interesting description",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "next build",
+    "start": "next start",
+    "dev": "next dev"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,14 @@
   "bugs": {
     "url": "https://github.com/enddne/wrapping-letters-demopage/issues"
   },
-  "homepage": "https://github.com/enddne/wrapping-letters-demopage#readme"
+  "homepage": "https://github.com/enddne/wrapping-letters-demopage#readme",
+  "dependencies": {
+    "next": "^12.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.1",
+    "prettier": "^2.7.1"
+  }
 }
