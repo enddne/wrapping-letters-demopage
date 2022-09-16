@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Didot";
+  src: url(/fonts/Didot\ Regular.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Didot";
+  src: url(/fonts/Didot\ Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Didot";
+  src: url(/fonts/Didot\ Bold\ Italic.ttf);
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Didot";
+  src: url(/fonts/Didot\ LT\ Std\ Bold.otf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Didot";
+  src: url(/fonts/Didot\ LT\ Std\ Italic.otf);
+  font-style: italic;
+}
