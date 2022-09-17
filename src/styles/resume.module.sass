@@ -1,0 +1,94 @@
+.container
+  display: flex
+  width: 100%
+  padding: 2%
+
+  .ctn--introduction
+    width: 30%
+
+    img
+      margin-bottom: 20px
+      width: 100%
+
+    .content
+      padding: 0 10px
+
+      h1
+        font-family: "Dodit"
+        font-size: 40px
+
+        a
+          font-size: 30px
+          font-family: "Dodit"
+
+      small
+        display: block
+        margin-bottom: 15px
+
+      p
+        text-align: justify
+        margin-bottom: 15px
+
+  .ctn--content
+    width: 70%
+    display: block
+    margin-left: 50px
+
+    .content-header
+      display: flex
+      justify-content: space-between
+      margin-bottom: 50px
+
+      .box-content
+        width: 49%
+
+        h3
+          font-size: 35px
+          font-family: "Dodit"
+          margin-bottom: 10px
+
+        p
+          margin-bottom: 15px
+          text-align: justify
+
+        ul
+          display: flex
+          flex-wrap: wrap
+
+          li
+            list-style: none
+            width: 50%
+            margin-bottom: 10px
+
+        .skills--box
+
+          .learning
+            position: relative
+            margin-bottom: 15px
+
+            &::before
+              content: ''
+              position: absolute
+              bottom: 0
+              left: 0
+              height: 1px
+              width: 70%
+              background-color: #000
+
+            p
+              font-style: italic
+              margin-bottom: 5px
+
+            ul
+              li
+                color: #808080
+
+    .content-aboutMe
+      .experience-container, .studies-container
+        p
+          font-family: "Dodit"
+          font-size: 50px
+          margin-bottom: 50px
+
+          a
+            font-family: "Dodit"
