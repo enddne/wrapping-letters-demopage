@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": ["./src/*"],
+      "@styles/*": ["./src/styles/*"]
+    }
+  }
+  // "include": ["**/*.ts", "**/*.tsx"],
+  // "exclude": ["node_modules"]
+}
