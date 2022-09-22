@@ -1,4 +1,4 @@
-import styles from "@styles/wl-slider.module.sass";
+import styles from "@styles/wl-slider.module.scss";
 
 export function WlSlider() {
   return (
