@@ -1,4 +1,4 @@
-import styles from "@styles/wl-slider.module.scss";
+const styles = require("@styles/wl-slider.module.scss");
 
 export function WlSlider() {
   return (
