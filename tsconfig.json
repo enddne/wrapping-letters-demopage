@@ -1,11 +1,27 @@
 {
+  "include": ["src/**/*", "tests/**/*"],
+  "exclude": [],
   "compilerOptions": {
-    "baseUrl": ".",
+    /* Visit https://aka.ms/tsconfig to read more about this file */
+
+    "target": "ES2015",
+    "jsx": "preserve",
+    "module": "commonjs",
+    "baseUrl": "src/",
     "paths": {
-      "@src/*": ["./src/*"],
-      "@styles/*": ["./src/styles/*"]
-    }
+      "@components/*": ["components/*"],
+      "@styles/*": ["styles/*"]
+    },
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "noEmit": true,
+    "incremental": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true
   }
-  // "include": ["**/*.ts", "**/*.tsx"],
-  // "exclude": ["node_modules"]
 }
