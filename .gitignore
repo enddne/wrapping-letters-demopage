@@ -1,6 +1,8 @@
 node_modules
 .env
 *.jpg
+.tsconfig.json
+
 
 ### macOS ###
 # General
