@@ -1,0 +1,28 @@
+.container {
+  position: relative;
+
+  .container--slider {
+    margin: 26px 0;
+
+    span {
+      font-family: "Didot";
+      font-size: 50px;
+      text-transform: uppercase;
+      white-space: pre;
+    }
+
+    &:nth-child(1) {
+      // margin-left: -133%
+      animation: slider 60s linear infinite;
+    }
+  }
+}
+
+@keyframes slider {
+  0% {
+    margin-left: 0%;
+  }
+  100% {
+    margin-left: -133%;
+  }
+}
