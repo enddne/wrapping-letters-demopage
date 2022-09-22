@@ -3,6 +3,8 @@ node_modules
 *.jpg
 .tsconfig.json
 
+next-env.d.ts
+
 
 ### macOS ###
 # General
