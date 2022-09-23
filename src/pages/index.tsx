@@ -1,11 +1,13 @@
-import React from "react";
-import { WlSlider } from "@components/wl-slider.component";
+import { Intrduction } from "@components/home/introduction.component";
+import { WlSlider } from "@components/home/wl-slider.component";
 
 export default function home() {
   return (
     <>
       <WlSlider />
-      <p>Hello?</p>
+      <header>
+        <Intrduction />
+      </header>
     </>
   );
 }
