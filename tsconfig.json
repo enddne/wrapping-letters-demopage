@@ -10,7 +10,8 @@
     "baseUrl": "src/",
     "paths": {
       "@components/*": ["components/*"],
-      "@styles/*": ["styles/*"]
+      "@styles/*": ["styles/*"],
+      "@module/*": ["module/*"]
     },
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
