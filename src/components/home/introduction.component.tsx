@@ -4,24 +4,20 @@ const styles = require("@styles/home/introduction.module.scss");
 
 export function Intrduction() {
   const StrongTag = ({
-    text,
+    letter,
     cssClass,
   }: {
-    text: string;
+    letter: string;
     cssClass: string;
   }) => {
-    return (
-      <strong className={styles[cssClass]}>
-        <i>{text}</i>
-      </strong>
-    );
+    return <strong className={styles[cssClass]}>{letter}</strong>;
   };
 
   return (
     <>
-      <div className={styles.container}>
+      <div className="container">
         <p className={styles.textToLeft}>
-          <div className={styles.textContainer}>
+          <span className={styles.textContainer}>
             <Wrapping
               text="Start to use Wrapping Letters in your text animation to simplify your code logic in React.js"
               textOptions={{
@@ -32,8 +28,11 @@ export function Intrduction() {
                 PerWord: true,
               }}
             />
-          </div>
+          </span>
         </p>
+        <code className={styles["npm-code"]}>
+          $ npm installe wrapping-letters-react
+        </code>
       </div>
     </>
   );
