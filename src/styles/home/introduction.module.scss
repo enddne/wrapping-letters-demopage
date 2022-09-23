@@ -12,7 +12,7 @@
 .textToRigth {
   .textContainer {
     display: inline-block;
-    width: 60%;
+    width: 65%;
 
     strong {
       font-style: italic;
@@ -21,6 +21,23 @@
 }
 
 .npm-code {
+  display: block;
   font-family: "Fira Code", monospace;
-  font-weight: 500;
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-top: 23px;
+  cursor: pointer;
+  transition: 200ms ease;
+
+  &::before {
+    content: "$ ";
+  }
+
+  &:hover {
+    color: var(--hover-color);
+  }
+}
+
+.networks-container {
+  margin-top: 1rem;
 }
