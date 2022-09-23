@@ -21,38 +21,36 @@ export function Intrduction() {
 
   return (
     <>
-      <div className="container">
-        <p className={styles.textToLeft}>
-          <span className={styles.textContainer}>
-            <Wrapping
-              text="Start to use Wrapping Letters in your text animation to simplify your code logic in React.js"
-              textOptions={{
-                SpecialWrapp: {
-                  wordToSearch: ["Wrapping", "Letters"],
-                  structureToAdd: StrongTag,
-                },
-                PerWord: true,
-              }}
-            />
-          </span>
-        </p>
-        <code
-          ref={copyButtonRef}
-          onClick={() => copy(copyButtonRef)}
-          className={styles["npm-code"]}
+      <p className={styles.textToLeft}>
+        <span className={styles.textContainer}>
+          <Wrapping
+            text="Start to use Wrapping Letters in your text animation to simplify your code logic in React.js"
+            textOptions={{
+              SpecialWrapp: {
+                wordToSearch: ["Wrapping", "Letters"],
+                structureToAdd: StrongTag,
+              },
+              PerWord: true,
+            }}
+          />
+        </span>
+      </p>
+      <code
+        ref={copyButtonRef}
+        onClick={() => copy(copyButtonRef)}
+        className={styles["npm-code"]}
+      >
+        npm install wrapping-letters-react
+      </code>
+      <div className={styles["networks-container"]}>
+        <a
+          href="https://github.com/srtager555/wrapping-letters"
+          target="_blank"
+          rel="noreferrer"
+          className="github--anchor"
         >
-          npm install wrapping-letters-react
-        </code>
-        <div className={styles["networks-container"]}>
-          <a
-            href="https://github.com/srtager555/wrapping-letters"
-            target="_blank"
-            rel="noreferrer"
-            className="github--anchor"
-          >
-            <BsGithub />
-          </a>
-        </div>
+          <BsGithub />
+        </a>
       </div>
     </>
   );
