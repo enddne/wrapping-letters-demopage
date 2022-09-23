@@ -6,13 +6,31 @@
 .textToRigth {
   display: flex;
   justify-content: flex-end;
+
+  .textContainer {
+    text-align: end;
+  }
 }
 
 .textToLeft,
 .textToRigth {
+  &.magin-bottom {
+    margin-bottom: 100px;
+  }
+
   .textContainer {
     display: inline-block;
-    width: 65%;
+    width: 80%;
+
+    h2 {
+      font-size: 2rem;
+      font-family: "Didot";
+    }
+
+    p {
+      display: inline-block;
+      width: 85%;
+    }
 
     strong {
       font-style: italic;
