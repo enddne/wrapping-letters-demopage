@@ -4,7 +4,7 @@ import { copy } from "@modules/copy.module";
 import { BsGithub } from "react-icons/bs";
 import Wrapping from "wrapping-letters-react";
 
-const styles = require("@styles/home/introduction.module.scss");
+const styles = require("@styles/home/content.module.scss");
 
 export function Intrduction() {
   const copyButtonRef = useRef(null);
