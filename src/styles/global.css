@@ -31,3 +31,8 @@
   src: url(/fonts/Didot\ LT\ Std\ Italic.otf);
   font-style: italic;
 }
+
+.container {
+  width: 94%;
+  margin: 0 auto;
+}
