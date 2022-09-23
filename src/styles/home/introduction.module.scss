@@ -1,0 +1,26 @@
+.textToLeft {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.textToRigth {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.textToLeft,
+.textToRigth {
+  .textContainer {
+    display: inline-block;
+    width: 60%;
+
+    strong {
+      font-style: italic;
+    }
+  }
+}
+
+.npm-code {
+  font-family: "Fira Code", monospace;
+  font-weight: 500;
+}
