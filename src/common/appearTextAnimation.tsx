@@ -6,7 +6,7 @@ const styles = require("@styles/textAppear.module.scss");
 export function TextAppear({
   className,
   text,
-  options,
+  options = {},
 }: {
   className?: string;
   text: string;
@@ -79,7 +79,7 @@ export function TextAppear({
       const option = {
         root: null,
         rootMargin: "0px",
-        threshold: 0.5,
+        threshold: 0.8,
       };
       const current = itemRef.current;
       const observer = new IntersectionObserver(IOCB, option);
