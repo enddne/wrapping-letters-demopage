@@ -11,7 +11,8 @@
     "paths": {
       "@components/*": ["components/*"],
       "@styles/*": ["styles/*"],
-      "@modules/*": ["modules/*"]
+      "@modules/*": ["modules/*"],
+      "@common/*": ["common/*"]
     },
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
