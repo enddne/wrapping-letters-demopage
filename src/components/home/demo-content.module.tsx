@@ -1,4 +1,5 @@
 import Wl from "wrapping-letters-react";
+import { TextAppear } from "@common/appearTextAnimation";
 
 const styles = require("@styles/home/content.module.scss");
 
@@ -21,7 +22,17 @@ export function DemoContent() {
         <div className={styles.textContainer}>
           <h2>What does Wrapping Letters do?</h2>
           <p>
-            <Wl
+            <TextAppear
+              text="Wrapping Letters wrap for you the text in your code editor, simplify the task to animate in very few code lines"
+              options={{
+                SpecialWrapp: {
+                  wordToSearch: wordsToSearch,
+                  structureToAdd: StrongTag,
+                },
+                PerWord: true,
+              }}
+            />
+            {/* <Wl
               text="Wrapping letters wrap for you the text in your code editor, simplify the task to animate in very few code lines"
               textOptions={{
                 SpecialWrapp: {
@@ -30,7 +41,7 @@ export function DemoContent() {
                 },
                 PerWord: true,
               }}
-            />
+            /> */}
           </p>
         </div>
       </section>
