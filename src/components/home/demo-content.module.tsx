@@ -32,16 +32,6 @@ export function DemoContent() {
                 PerWord: true,
               }}
             />
-            {/* <Wl
-              text="Wrapping letters wrap for you the text in your code editor, simplify the task to animate in very few code lines"
-              textOptions={{
-                SpecialWrapp: {
-                  wordToSearch: wordsToSearch,
-                  structureToAdd: StrongTag,
-                },
-                PerWord: true,
-              }}
-            /> */}
           </p>
         </div>
       </section>
@@ -49,9 +39,9 @@ export function DemoContent() {
         <div className={styles.textContainer}>
           <h2>How does Wrapping Letters do?</h2>
           <p>
-            <Wl
+            <TextAppear
               text='Wrapping Letters search for the words through an iteration that returns a "list" of JSX elements that you can manipulate as you please'
-              textOptions={{
+              options={{
                 SpecialWrapp: {
                   wordToSearch: wordsToSearch,
                   structureToAdd: StrongTag,
@@ -66,9 +56,9 @@ export function DemoContent() {
         <div className={styles.textContainer}>
           <h2>Code difference</h2>
           <p>
-            <Wl
+            <TextAppear
               text="Here an example of the difference with natural code vs. Wrapping Letters"
-              textOptions={{
+              options={{
                 SpecialWrapp: {
                   wordToSearch: wordsToSearch,
                   structureToAdd: StrongTag,
