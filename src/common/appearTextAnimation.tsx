@@ -4,51 +4,103 @@ import WL from "wrapping-letters-react";
 const styles = require("@styles/textAppear.module.scss");
 
 export function TextAppear({
+  className,
   text,
   options,
 }: {
+  className?: string;
   text: string;
   options: object;
 }) {
-  function LetterStructure({
+  const [isVisible, setIsVisible] = useState(false);
+  const itemRef = useRef(null);
+
+  function IOCB(entries: IntersectionObserverEntry[]): void {
+    if (entries[0].isIntersecting) setIsVisible(true);
+  }
+
+  function Structure({
     letter,
     cssClass,
+    specialWrapp,
+    index,
   }: {
     letter: string;
     cssClass: string;
+    specialWrapp: {
+      // eslint-disable-next-line no-undef
+      NewWrappStructure: Function | undefined;
+      hasCustomWrapp: boolean;
+    };
+    index: number;
   }) {
-    const [isVisible, setIsVisible] = useState(false);
-    const itemRef = useRef(null);
+    type Props = { letter: string; cssClass: string };
 
-    function IOCB(entries): void {
-      console.log(entries);
-    }
+    const { NewWrappStructure, hasCustomWrapp } = specialWrapp;
 
-    useEffect(
-      function () {
-        const options = {
-          root: null,
-          rootMargin: "0px",
-          threshold: 1.0,
-        };
-        const current = itemRef.current;
-        const observer = new IntersectionObserver(IOCB, options);
+    let Default = (props: Props) => {
+      let cssName = props.cssClass ? { className: props.cssClass } : {};
 
-        if (itemRef.current) observer.observe(itemRef.current);
+      return (
+        <span
+          className={styles["text-box"]}
+          style={{ transitionDelay: `${50 * index}ms` }}
+        >
+          <span {...cssName}>{props.letter}</span>
+        </span>
+      );
+    };
 
-        return () => {
-          if (current) observer.observe(current);
-        };
-      },
-      [itemRef]
-    );
+    let Custom = (props: Props) => {
+      return (
+        <span
+          className={styles["text-box"]}
+          style={{ transitionDelay: `${50 * index}ms` }}
+        >
+          {NewWrappStructure && (
+            <NewWrappStructure
+              letter={props.letter}
+              cssClass={props.cssClass}
+            />
+          )}
+        </span>
+      );
+    };
 
-    return (
-      <span ref={itemRef} className={`${cssClass} ${styles.text}`}>
-        <span>{letter}</span>
-      </span>
+    return hasCustomWrapp ? (
+      <Custom letter={letter} cssClass={cssClass} />
+    ) : (
+      <Default letter={letter} cssClass={cssClass} />
     );
   }
 
-  return <WL text={text} textOptions={options} structure={LetterStructure} />;
+  useEffect(
+    function () {
+      const option = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5,
+      };
+      const current = itemRef.current;
+      const observer = new IntersectionObserver(IOCB, option);
+
+      if (itemRef.current) observer.observe(itemRef.current);
+
+      return () => {
+        if (current) observer.observe(current);
+      };
+    },
+    [itemRef]
+  );
+
+  return (
+    <span
+      ref={itemRef}
+      className={`${styles.text}${isVisible ? ` ${styles["show--text"]}` : ""}${
+        className ? ` ${className}` : ""
+      }`}
+    >
+      <WL text={text} textOptions={options} structure={Structure} />
+    </span>
+  );
 }
