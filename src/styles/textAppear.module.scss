@@ -1,0 +1,25 @@
+.text {
+  display: inline-block;
+
+  .text-box {
+    display: inline-block;
+    overflow: hidden;
+
+    span,
+    strong {
+      display: inline-block;
+      white-space: pre;
+      transform: translate(20%, 120%) rotate(15deg);
+      transition: 200ms ease;
+    }
+  }
+
+  &.show--text {
+    .text-box {
+      span,
+      strong {
+        transform: translate(0%, 0%) rotate(0deg);
+      }
+    }
+  }
+}
