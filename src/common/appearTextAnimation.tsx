@@ -17,7 +17,7 @@ export function TextAppear({
 
   function IOCB(entries: IntersectionObserverEntry[]): void {
     if (entries[0].isIntersecting) setIsVisible(true);
-    else setIsVisible(false);
+    // else setIsVisible(false);
   }
 
   function Structure({
