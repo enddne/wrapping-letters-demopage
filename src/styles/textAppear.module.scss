@@ -1,25 +1,34 @@
 .text {
   display: inline-block;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
 
   .text-box {
     display: inline-block;
     overflow: hidden;
 
+    // &:hover {
+    //   span,
+    //   strong {
+    //     transform: translate(20%, 120%) rotate(15deg) !important;
+    //   }
+    // }
     span,
     strong {
       display: inline-block;
       white-space: pre;
-      transform: translate(20%, 120%) rotate(15deg);
+      // transform: translate(20%, 120%) rotate(15deg);
       transition: all 200ms ease-in-out;
     }
   }
 
   &.show--text {
-    .text-box {
-      span,
-      strong {
-        transform: translate(0%, 0%) rotate(0deg);
-      }
-    }
+    opacity: 1;
+    // .text-box {
+    //   span,
+    //   strong {
+    //     transform: translate(0%, 0%) rotate(0deg);
+    //   }
+    // }
   }
 }
