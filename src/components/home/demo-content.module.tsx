@@ -8,12 +8,12 @@ export function DemoContent() {
 
   const StrongTag = ({
     letter,
-    cssClass,
+    cssStyle,
   }: {
     letter: string;
-    cssClass: string;
+    cssStyle: object;
   }) => {
-    return <strong className={styles[cssClass]}>{letter}</strong>;
+    return <strong style={cssStyle}>{letter}</strong>;
   };
 
   return (
