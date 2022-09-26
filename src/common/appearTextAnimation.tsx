@@ -17,11 +17,11 @@ export function TextAppear({
 
   function IOCB(entries: IntersectionObserverEntry[]): void {
     if (entries[0].isIntersecting) setIsVisible(true);
+    else setIsVisible(false);
   }
 
   function Structure({
     letter,
-    cssClass,
     specialWrapp,
     index,
   }: {
@@ -34,33 +34,27 @@ export function TextAppear({
     };
     index: number;
   }) {
-    type Props = { letter: string; cssClass: string };
+    type Props = { letter: string };
 
     const { NewWrappStructure, hasCustomWrapp } = specialWrapp;
 
     let Default = (props: Props) => {
-      let cssName = props.cssClass ? { className: props.cssClass } : {};
-
       return (
-        <span
-          className={styles["text-box"]}
-          style={{ transitionDelay: `${50 * index}ms` }}
-        >
-          <span {...cssName}>{props.letter}</span>
+        <span className={`${styles["text-box"]}`}>
+          <span style={{ transitionDelay: `${index * 10}ms` }}>
+            {props.letter}
+          </span>
         </span>
       );
     };
 
     let Custom = (props: Props) => {
       return (
-        <span
-          className={styles["text-box"]}
-          style={{ transitionDelay: `${50 * index}ms` }}
-        >
+        <span className={styles["text-box"]}>
           {NewWrappStructure && (
             <NewWrappStructure
               letter={props.letter}
-              cssClass={props.cssClass}
+              cssStyle={{ transitionDelay: `${index * 10}ms` }}
             />
           )}
         </span>
@@ -68,9 +62,9 @@ export function TextAppear({
     };
 
     return hasCustomWrapp ? (
-      <Custom letter={letter} cssClass={cssClass} />
+      <Custom letter={letter} />
     ) : (
-      <Default letter={letter} cssClass={cssClass} />
+      <Default letter={letter} />
     );
   }
 
