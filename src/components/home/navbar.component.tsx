@@ -11,7 +11,7 @@ export function Navbar() {
         </Link>
       </div>
       <div className={`${styles["anchor--container"]} ${styles.disable}`}>
-        {/* <Link href="/docs"> */}
+        {/* <Link href="/docs/examples"> */}
         <a>Examples</a>
         {/* </Link> */}
       </div>
