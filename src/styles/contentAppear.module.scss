@@ -1,4 +1,4 @@
-.text {
+.text--container {
   display: inline-block;
   opacity: 0;
   transition: all 300ms ease-in-out;
@@ -22,7 +22,7 @@
     }
   }
 
-  &.show--text {
+  &.show--content {
     opacity: 1;
     // .text-box {
     //   span,
