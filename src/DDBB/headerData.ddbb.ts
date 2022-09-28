@@ -1,11 +1,4 @@
-import { ID } from "@common/type";
-
-type PageContent = {
-  id: ID;
-  url: string;
-  title: string;
-  description: string;
-};
+import { ID, PageContent } from "@common/type";
 
 export const Data: Record<ID, PageContent> = {
   "0000": {
