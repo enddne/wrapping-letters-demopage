@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
-      "@src/*": ["./src/*"],
-      "@styles/*": ["./src/styles/*"]
+      "@components/*": ["components/*"],
+      "@styles/*": ["styles/*"],
+      "@modules/*": ["modules/*"],
+      "@common/*": ["common/*"],
+      "@DDBB/*": ["DDBB/*"]
     }
   }
 }

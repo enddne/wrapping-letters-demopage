@@ -12,7 +12,8 @@
       "@components/*": ["components/*"],
       "@styles/*": ["styles/*"],
       "@modules/*": ["modules/*"],
-      "@common/*": ["common/*"]
+      "@common/*": ["common/*"],
+      "@DDBB/*": ["DDBB/*"]
     },
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
