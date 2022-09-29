@@ -10,8 +10,8 @@ type Content = {
 };
 
 export const PageData: Record<ID, Content> = {
-  "0000": {
-    id: "0000",
+  "getting-started": {
+    id: "getting-started",
     content: [
       { tag: "h2", text: "first thing's first" },
       {

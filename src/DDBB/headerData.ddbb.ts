@@ -1,9 +1,8 @@
 import { ID, PageContent } from "@common/type";
 
 export const Data: Record<ID, PageContent> = {
-  "0000": {
-    id: "0000",
-    url: "getting_started",
+  "getting-started": {
+    id: "getting-started",
     title: "Getting Started",
     description: "Here you'll learn how to use Wrapping Letters",
   },
