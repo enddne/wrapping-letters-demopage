@@ -1,27 +1,28 @@
-import { useRouter } from "next/router";
-
-import { DataManager as Dm } from "@DDBB/index";
 import { ID, PageContent } from "@common/type";
-import { GetServerSideProps } from "next";
+import { GetStaticPaths, GetStaticProps } from "next";
 
-export default function SearchDocs({
-  data,
-}: {
-  data: Record<ID, PageContent>;
-}) {
-  const { id = "" } = useRouter().query;
-
-  const DataManager = new Dm();
-
-  return DataManager.getHeaderByID(data, id as string);
+export default function SearchDocs({ data }: { data: PageContent }) {
+  return (
+    <>
+      <span>{data.title}</span> | <span>{data.description}</span>
+    </>
+  );
 }
 
-export async function getServerSideProps(): Promise<GetServerSideProps> {
-  // Fetch data from external API
-  const res = await fetch(`${process.env.API}/docs/`);
+export const getStaticPaths: GetStaticPaths = async () => {
+  const res = await fetch(`${process.env.API}/docs`);
+  const posts: Record<ID, PageContent> = await res.json();
 
+  const paths = Object.values(posts).map((post: PageContent) => ({
+    params: { id: post.id },
+  }));
+
+  return { paths, fallback: false };
+};
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const res = await fetch(`${process.env.API}/docs/${context.params?.id}`);
   const data = await res.json().catch(console.log);
 
-  // Pass data to the page via props
-  return data;
-}
+  return { props: { data } };
+};
