@@ -19,7 +19,6 @@ export type WL = {
 
 export type PageContent = {
   id: ID;
-  url: string;
   title: string;
   description: string;
 };
