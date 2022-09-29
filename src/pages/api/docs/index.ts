@@ -1,9 +1,9 @@
 import { Data } from "@DDBB/headerData.ddbb";
-import { IncomingMessage, ServerResponse } from "http";
+import { NextApiRequest, NextApiResponse } from "next";
 
 export default async function HeaderContent(
-  request: IncomingMessage,
-  response: ServerResponse
+  req: NextApiRequest,
+  res: NextApiResponse
 ) {
-  response.end(JSON.stringify(Data));
+  res.status(200).json(Data);
 }
