@@ -1,4 +1,5 @@
 import { ID, PageContent } from "@common/type";
+import { Data } from "@DDBB/headerData.ddbb";
 import { DataManager } from "@DDBB/index";
 import { NextApiRequest, NextApiResponse } from "next";
 
@@ -9,9 +10,27 @@ export default async function DynamicApiRouteToDocs(
   const Manager = new DataManager();
   const { id } = req.query;
 
-  const allContentHeader = await fetch(`${process.env.API}/docs/`);
+  // An issue with the peticion
+  // const allContentHeader = await fetch(`${process.env.API}/docs/`);
 
-  const Data = await Manager.getHeaderByID(allContentHeader, id as string);
+  const allContentHeader = Data;
 
-  res.status(200).json(Data);
+  const ENTRY = Manager.getHeaderByID(
+    allContentHeader as unknown as Record<ID, PageContent>,
+    id as string
+  );
+
+  if (!ENTRY) {
+    res.status(404);
+    res.end(
+      JSON.stringify({
+        status: "404",
+        AllContentHeader: allContentHeader,
+        ID: id,
+      })
+    );
+  }
+
+  res.status(200);
+  res.end(JSON.stringify(ENTRY));
 }
