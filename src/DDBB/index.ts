@@ -3,10 +3,12 @@ import { ID, PageContent } from "@common/type";
 export class DataManager {
   constructor() {}
 
-  async getHeaderByID(
-    headers: Record<ID, PageContent>,
+  getHeaderByID(
+    headers: Record<ID, PageContent> | undefined,
     id: string
-  ): Promise<PageContent | null> {
+  ): PageContent | null {
+    if (!headers) return null;
+
     if (!Object.prototype.hasOwnProperty.call(headers, id)) return null;
 
     return headers[id];
