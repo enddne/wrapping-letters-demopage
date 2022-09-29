@@ -1,32 +1,27 @@
-import { IncomingMessage, ServerResponse } from "http";
 import { useRouter } from "next/router";
 
-// import Data from "@DataBase";
+import { DataManager as Dm } from "@DDBB/index";
+import { ID, PageContent } from "@common/type";
+import { GetServerSideProps } from "next";
 
-export default function SearchDocs(
-  request: IncomingMessage,
-  response: ServerResponse
-): void {
-  const { id } = useRouter().query;
-  let DataToSend: string;
+export default function SearchDocs({
+  data,
+}: {
+  data: Record<ID, PageContent>;
+}) {
+  const { id = "" } = useRouter().query;
 
-  const Data = {
-    "1": {
-      hola: "hello",
-    },
-    "2": {
-      hola: "hello",
-    },
-  };
+  const DataManager = new Dm();
 
-  if (Object.keys(Data).some((el) => el === id)) {
-    Data[id];
-  } else {
-    response.statusCode = 404;
-    response.end(JSON.stringify(undefined));
+  return DataManager.getHeaderByID(data, id as string);
+}
 
-    return;
-  }
+export async function getServerSideProps(): Promise<GetServerSideProps> {
+  // Fetch data from external API
+  const res = await fetch(`${process.env.API}/docs/`);
 
-  response.end(JSON.stringify());
+  const data = await res.json().catch(console.log);
+
+  // Pass data to the page via props
+  return data;
 }
