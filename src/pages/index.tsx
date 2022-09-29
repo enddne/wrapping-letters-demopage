@@ -5,7 +5,7 @@ import { WlSlider } from "@components/home/wl-slider.component";
 
 const styles = require("@styles/home/index.module.scss");
 
-export default function home() {
+export default function Home() {
   return (
     <>
       <Navbar />
