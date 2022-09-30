@@ -64,6 +64,10 @@
 @media (min-width: 541px) {
   .textToLeft,
   .textToRigth {
+    &.magin-bottom {
+      margin-bottom: 110px;
+    }
+
     .textContainer {
       display: inline-block;
       width: 65%;
