@@ -21,20 +21,22 @@ export function Intrduction() {
 
   return (
     <>
-      <p className={styles.textToLeft}>
-        <span className={styles.textContainer}>
-          <Wrapping
-            text="Start to use Wrapping Letters in your text animation to simplify your code logic in React.js"
-            textOptions={{
-              SpecialWrapp: {
-                wordToSearch: ["Wrapping", "Letters"],
-                structureToAdd: StrongTag,
-              },
-              PerWord: true,
-            }}
-          />
-        </span>
-      </p>
+      <div className={styles.textToLeft}>
+        <div className={styles.textContainer}>
+          <p>
+            <Wrapping
+              text="Start to use Wrapping Letters in your text animation to simplify your code logic in React.js"
+              textOptions={{
+                SpecialWrapp: {
+                  wordToSearch: ["Wrapping", "Letters"],
+                  structureToAdd: StrongTag,
+                },
+                PerWord: true,
+              }}
+            />
+          </p>
+        </div>
+      </div>
       <code
         ref={copyButtonRef}
         onClick={() => copy(copyButtonRef)}
