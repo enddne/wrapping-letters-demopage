@@ -5,6 +5,7 @@ export function WlSlider() {
     <div className={styles["container"]}>
       <div className={styles["container--slider"]}>
         <span>wrapping letters </span>
+        <span>wrapping letters </span>
         <span>wrapping letters</span>
       </div>
     </div>
