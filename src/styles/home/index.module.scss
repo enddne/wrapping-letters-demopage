@@ -7,3 +7,14 @@
     margin-bottom: 190px;
   }
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+  }
+}
