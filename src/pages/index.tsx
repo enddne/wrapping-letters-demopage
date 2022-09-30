@@ -9,13 +9,17 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <WlSlider />
-      <header className={`container ${styles.header}`}>
-        <Intrduction />
-      </header>
-      <main className={`container ${styles.main}`}>
-        <DemoContent />
-      </main>
+      <div className={styles.container}>
+        <WlSlider />
+        <div className={styles.container__content}>
+          <header className={`container ${styles.header}`}>
+            <Intrduction />
+          </header>
+          <main className={`container ${styles.main}`}>
+            <DemoContent />
+          </main>
+        </div>
+      </div>
     </>
   );
 }
