@@ -1,5 +1,7 @@
 .container {
   position: relative;
+  width: 100%;
+  overflow: hidden;
 
   .container--slider {
     margin: 26px 0;
@@ -23,5 +25,20 @@
   }
   100% {
     margin-left: -552.75px;
+  }
+}
+
+@media (min-width: 540px) {
+  .container .container--slider span {
+    font-size: 100px;
+  }
+
+  @keyframes slider {
+    0% {
+      margin-left: 0px;
+    }
+    100% {
+      margin-left: -1105.5px;
+    }
   }
 }
