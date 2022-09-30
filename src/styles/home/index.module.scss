@@ -1,3 +1,9 @@
 .header {
   margin-bottom: 110px;
 }
+
+@media (min-width: 541px) {
+  .header {
+    margin-bottom: 190px;
+  }
+}
