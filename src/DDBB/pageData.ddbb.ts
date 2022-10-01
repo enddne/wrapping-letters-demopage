@@ -1,13 +1,4 @@
-import { ID, WL } from "@common/type";
-
-type Content = {
-  id: string;
-  content: {
-    tag: "h2" | "a" | "p" | "img" | "h3" | "note" | "code";
-    text: string;
-    wlProps?: WL;
-  }[];
-};
+import { ID, Content } from "@common/type";
 
 export const PageData: Record<ID, Content> = {
   "getting-started": {
