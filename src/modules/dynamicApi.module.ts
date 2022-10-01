@@ -1,11 +1,11 @@
-import { ID, PageContent } from "@common/type";
+import { ID, PageContent, Content } from "@common/type";
 import { DataManager } from "@DDBB/index";
 import { NextApiRequest, NextApiResponse } from "next";
 
 export async function DynamicApiRoute(
   req: NextApiRequest,
   res: NextApiResponse,
-  Data: Record<ID, PageContent> | PageContent
+  Data: Record<ID, PageContent> | Record<ID, Content>
 ): Promise<void> {
   const Manager = new DataManager();
   const { id } = req.query;
@@ -15,8 +15,10 @@ export async function DynamicApiRoute(
 
   const allContentHeader = Data;
 
-  const ENTRY = Manager.getHeaderByID(
-    allContentHeader as unknown as Record<ID, PageContent>,
+  const ENTRY = Manager.getDataByID(
+    allContentHeader as unknown as
+      | Record<ID, PageContent>
+      | Record<ID, Content>,
     id as string
   );
 
