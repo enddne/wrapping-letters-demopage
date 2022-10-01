@@ -5,16 +5,13 @@
 
   .container--slider {
     margin: 26px 0;
+    animation: slider 60s linear infinite;
 
     span {
       font-family: "Didot";
       font-size: 50px;
       text-transform: uppercase;
       white-space: pre;
-    }
-
-    &:nth-child(1) {
-      animation: slider 60s linear infinite;
     }
   }
 }
@@ -49,12 +46,14 @@
     top: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 30%;
     height: 100vh;
 
     .container--slider {
       transform: rotate(90deg);
+      animation: slider 30s linear infinite;
+      margin: 0;
 
       span {
         font-size: 150px;
@@ -67,7 +66,7 @@
       margin-top: 0px;
     }
     100% {
-      margin-top: -1630.06px;
+      margin-top: -1648.853px;
     }
   }
 }
