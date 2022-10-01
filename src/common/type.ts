@@ -22,3 +22,12 @@ export type PageContent = {
   title: string;
   description: string;
 };
+
+export type Content = {
+  id: string;
+  content: {
+    tag: "h2" | "a" | "p" | "img" | "h3" | "note" | "code";
+    text: string;
+    wlProps?: WL;
+  }[];
+};
