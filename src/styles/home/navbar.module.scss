@@ -68,8 +68,10 @@
 
 @media (min-width: 1024px) {
   .navbar {
-    transform: translate(-50%, 100%);
+    transform: translate(0%, 100%);
     bottom: 100%;
+    width: 70%;
+    left: 30%;
 
     &::before {
       top: 100%;
