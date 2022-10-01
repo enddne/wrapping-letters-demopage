@@ -55,6 +55,10 @@
 
     .container--slider {
       transform: rotate(90deg);
+
+      span {
+        font-size: 150px;
+      }
     }
   }
 
@@ -63,7 +67,7 @@
       margin-top: 0px;
     }
     100% {
-      margin-top: -1105.5px;
+      margin-top: -1630.06px;
     }
   }
 }

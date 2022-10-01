@@ -14,6 +14,9 @@
 }
 
 @media (min-width: 1024px) {
+  .header {
+    margin-top: 100px;
+  }
   .container {
     flex-direction: row;
   }
