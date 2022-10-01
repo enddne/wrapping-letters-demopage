@@ -1,12 +1,12 @@
-import { ID, PageContent } from "@common/type";
+import { ID, PageContent, Content } from "@common/type";
 
 export class DataManager {
   constructor() {}
 
-  getHeaderByID(
-    headers: Record<ID, PageContent> | undefined,
+  getDataByID(
+    headers: Record<ID, PageContent> | Record<ID, Content> | undefined,
     id: string
-  ): PageContent | null {
+  ): PageContent | Content | null {
     if (!headers) return null;
 
     if (!Object.prototype.hasOwnProperty.call(headers, id)) return null;
