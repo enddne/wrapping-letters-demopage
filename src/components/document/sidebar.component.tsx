@@ -5,7 +5,25 @@ export function Aside({
   allHeaders,
 }: {
   currentHeader: PageContent;
-  allHeaders: Record<ID, PageContent> | undefined;
+  allHeaders: Record<ID, Record<ID, PageContent>>;
 }) {
-  return <aside></aside>;
+  let entriesArray = Object.entries(allHeaders);
+
+  console.log(entriesArray);
+  return (
+    <aside>
+      <ul>
+        {entriesArray.map((el, index) => (
+          <li key={`${el[0]} ${index}`}>
+            {el[0]}
+            <ul>
+              {Object.values(el[1]).map((element: PageContent) => (
+                <li key={element.id}>{element.title}</li>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ul>
+    </aside>
+  );
 }
