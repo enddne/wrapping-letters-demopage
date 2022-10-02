@@ -7,6 +7,5 @@ export function Aside({
   currentHeader: PageContent;
   allHeaders: Record<ID, PageContent> | undefined;
 }) {
-  console.log(currentHeader, allHeaders);
   return <aside></aside>;
 }
