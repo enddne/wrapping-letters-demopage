@@ -7,6 +7,11 @@ export const Data: Record<ID, Record<ID, PageContent>> = {
       title: "Getting Started",
       description: "Here you'll learn how to use Wrapping Letters",
     },
+    "best-pratice": {
+      id: "best-pratice",
+      title: "Best Pratice",
+      description: "Here you'll learn how to use Wrapping Letters",
+    },
   },
   "Component Syntaxis": {
     text: {

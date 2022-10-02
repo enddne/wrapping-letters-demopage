@@ -11,4 +11,8 @@ export const PageData: Record<ID, Content> = {
       },
     ],
   },
+  "best-pratice": {
+    id: "best-pratice",
+    content: [{ tag: "h2", text: "Best Pratice" }],
+  },
 };
