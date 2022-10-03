@@ -6,7 +6,7 @@ module.exports = {
     return [
       {
         source: "/docs",
-        destination: "/getting-started",
+        destination: "/docs/getting-started",
         permanent: true,
       },
     ];
