@@ -1,4 +1,8 @@
 import { ID, PageContent } from "@common/type";
+import { GithubAnchor } from "@common/github.link";
+import Link from "next/link";
+
+import styles from "@styles/docs/aside.module.scss";
 
 export function Aside({
   currentHeader,
@@ -9,21 +13,25 @@ export function Aside({
 }) {
   let entriesArray = Object.entries(allHeaders);
 
-  console.log(entriesArray);
   return (
-    <aside>
-      <ul>
+    <aside className={styles.container}>
+      <div className={styles.content}>
         {entriesArray.map((el, index) => (
-          <li key={`${el[0]} ${index}`}>
-            {el[0]}
-            <ul>
+          <div className={styles.stack} key={`${el[0]} ${index}`}>
+            <span className={styles["stack-title"]}>{el[0]}</span>
+            <div className={styles["stack--items__container"]}>
               {Object.values(el[1]).map((element: PageContent) => (
-                <li key={element.id}>{element.title}</li>
+                <Link href={`/docs/${element.id}`} key={element.id}>
+                  <a>{element.title}</a>
+                </Link>
               ))}
-            </ul>
-          </li>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
+      <footer className={styles.footer}>
+        <GithubAnchor />
+      </footer>
     </aside>
   );
 }
