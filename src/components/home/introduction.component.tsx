@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { copy } from "@modules/copy.module";
 
-import { BsGithub } from "react-icons/bs";
+import { GithubAnchor } from "@common/github.link";
 import Wrapping from "wrapping-letters-react";
 
 const styles = require("@styles/home/content.module.scss");
@@ -45,14 +45,7 @@ export function Intrduction() {
         npm install wrapping-letters-react
       </code>
       <div className={styles["networks-container"]}>
-        <a
-          href="https://github.com/srtager555/wrapping-letters"
-          target="_blank"
-          rel="noreferrer"
-          className="github--anchor"
-        >
-          <BsGithub />
-        </a>
+        <GithubAnchor />
       </div>
     </>
   );
