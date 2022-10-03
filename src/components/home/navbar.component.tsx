@@ -6,7 +6,7 @@ export function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className={styles["anchor--container"]}>
-        <Link href="/docs">
+        <Link href="/docs/getting-started">
           <a>Documentation</a>
         </Link>
       </div>
