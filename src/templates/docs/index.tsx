@@ -1,6 +1,8 @@
 import { Content, ID, PageContent } from "@common/type";
-import styles from "@styles/docs/index.module.scss";
 import { Aside } from "@components/document/sidebar.component";
+import { Main } from "@components/document/content.component";
+
+import styles from "@styles/docs/index.module.scss";
 
 export function DocumentationTemplate({
   header,
@@ -11,10 +13,10 @@ export function DocumentationTemplate({
   allHeaders?: Record<ID, PageContent>;
   CONTENT_JSON?: Content;
 }) {
-  console.log(CONTENT_JSON);
   return (
     <div className={styles.container}>
       <Aside currentHeader={header} allHeaders={allHeaders} />
+      <Main content={CONTENT_JSON} />
     </div>
   );
 }
