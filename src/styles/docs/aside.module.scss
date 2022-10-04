@@ -2,8 +2,11 @@ $fSize: 1.25rem;
 $anchorColor: #142bfe;
 
 .container {
-  position: relative;
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
   min-height: 100vh;
+  width: 100%;
   padding-top: 60px;
   padding-left: 50px;
   padding-right: 50px;
@@ -63,5 +66,14 @@ $anchorColor: #142bfe;
     padding: 35px 0;
     padding-left: inherit;
     padding-right: inherit;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 40%;
   }
 }
