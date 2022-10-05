@@ -13,6 +13,7 @@ export function Aside({
   allHeaders: Record<ID, Record<ID, PageContent>>;
 }) {
   let [isMobile, setIsMobile] = useState(true);
+  let [openMenu, setOpenMenu] = useState(false);
   let entriesArray = Object.entries(allHeaders);
 
   useEffect(function () {
@@ -20,6 +21,8 @@ export function Aside({
       if (window.innerWidth < 1024) setIsMobile(true);
       else setIsMobile(false);
     };
+
+    resizing();
 
     window.addEventListener("resize", resizing);
     return () => {
@@ -29,8 +32,19 @@ export function Aside({
 
   return (
     <>
-      {isMobile && <button className={styles["aside-button"]}>xd</button>}
-      <aside className={styles.container}>
+      {isMobile && (
+        <button
+          className={`${styles["aside-button"]}${
+            openMenu ? ` ${styles.open}` : ""
+          }`}
+          onClick={() => {
+            setOpenMenu(!openMenu);
+          }}
+        ></button>
+      )}
+      <aside
+        className={`${styles.container}${openMenu ? ` ${styles.open}` : ""}`}
+      >
         <div className={styles.content}>
           {entriesArray.map((el, index) => (
             <div className={styles.stack} key={`${el[0]} ${index}`}>
