@@ -18,8 +18,13 @@ export function Aside({
 
   useEffect(function () {
     let resizing = () => {
-      if (window.innerWidth < 1024) setIsMobile(true);
-      else setIsMobile(false);
+      if (window.innerWidth < 1024) {
+        setIsMobile(true);
+        setOpenMenu(false);
+      } else {
+        setIsMobile(false);
+        setOpenMenu(true);
+      }
     };
 
     resizing();
