@@ -16,8 +16,8 @@ export function Main({
     <main className={styles.main}>
       <div className={styles["content-container"]}>
         <header className={styles.header}>
-          <h2>xd</h2>
-          {currentHeader.toString()}
+          <h1>{currentHeader.title}</h1>
+          <p>{currentHeader.description}</p>
         </header>
         <section className={styles.content}>
           <h1>xd</h1>
