@@ -16,7 +16,7 @@ export function DocumentationTemplate({
   return (
     <div className={styles.container}>
       <Aside currentHeader={header} allHeaders={allHeaders} />
-      <Main content={CONTENT_JSON} />
+      <Main currentHeader={header} content={CONTENT_JSON} />
     </div>
   );
 }
