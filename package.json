@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/enddne/wrapping-letters-demopage#readme",
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
     "next": "^12.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
