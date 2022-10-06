@@ -2,6 +2,8 @@ type ID = string;
 
 type SpecialArray = string | string[];
 
+type Tags = "h2" | "a" | "p" | "img" | "h3" | "note" | "code";
+
 type WL = {
   ClassToAdd?: string;
   SelectClass?: {
@@ -14,7 +16,7 @@ type WL = {
     strucutureToAdd: SpecialArray;
   };
   PerWord: boolean;
-  strucuture: Function;
+  strucuture: function;
 };
 
 type PageContent = {
@@ -26,8 +28,17 @@ type PageContent = {
 type Content = {
   id: string;
   content: {
-    tag: "h2" | "a" | "p" | "img" | "h3" | "note" | "code";
+    tag: Tags;
     text: string;
     wlProps?: WL;
   }[];
 };
+
+type DataContentComponent =
+  | string
+  | { url: string; text: string }
+  | { src: string; alt: string; target: "_blank" | "" };
+
+type PropsContentComponent = { data: DataContentComponent; options: WL };
+
+type ContentTextComponent = (props: PropsContentComponent) => JSX.Element;
