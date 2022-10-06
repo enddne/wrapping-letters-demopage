@@ -2,7 +2,7 @@
 
 import { useRef, useEffect, useState } from "react";
 
-const styles = require("@styles/contentAppear.module.scss");
+import styles from "@styles/contentAppear.module.scss";
 
 export function ContentAppear({ children }: { children: JSX.Element | any }) {
   const [isVisible, setIsVisible] = useState(false);
