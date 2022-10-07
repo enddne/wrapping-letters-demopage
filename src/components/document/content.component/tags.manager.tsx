@@ -25,8 +25,6 @@ export default function TagManager({
     code: CodeElement,
   };
 
-  console.log(content);
-
   return (
     <>
       {content.map((el, index) => (
