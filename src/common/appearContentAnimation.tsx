@@ -4,7 +4,7 @@ import { useRef, useEffect, useState } from "react";
 
 import styles from "@styles/contentAppear.module.scss";
 
-export function ContentAppear({ children }: { children: JSX.Element | any }) {
+export function ContentAppear({ children }: { children: JSX.Element }) {
   const [isVisible, setIsVisible] = useState(false);
   const itemRef = useRef(null);
 
