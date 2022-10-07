@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ContentAppear } from "@common/appearContentAnimation";
 import Wl from "wrapping-letters-react";
 
@@ -16,22 +17,52 @@ export default function TagManager({ content }: Content) {
   ));
 }
 
-const H2Element: ContentTextComponent = ({ data, options }) => {
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+const H2Element: ContentTextComponent = ({ data: { text = "", options } }) => {
   return (
-    <h1>
-      <Wl text={data} textOptions={options && options} />
-    </h1>
+    <h2>
+      <Wl text={text} textOptions={options && options} />
+    </h2>
   );
 };
 
-const AnchorElement: ContentTextComponent = ({ data, options }) => (
-  <a href={data.url}>
-    <Wl text={data.text} textOptions={options && options} />
-  </a>
-);
-
-const ParaElement: ContentTextComponent = ({ data, options }) => (
+const ParaElement: ContentTextComponent = ({
+  data: { text = "", options },
+}) => (
   <p>
-    <Wl text={data.text} textOptions={options && options} />
+    <Wl text={text} textOptions={options && options} />
   </p>
 );
+
+const AnchorElement: ContentTextComponent = ({
+  data: { anchor = {}, options },
+}) => {
+  if (anchor.target != "") {
+    return (
+      <Link href={anchor.url ? anchor.url : ""}>
+        <a>
+          <Wl text={anchor.text} textOptions={options && options} />
+        </a>
+      </Link>
+    );
+  }
+
+  return (
+    <a href={anchor.url} target={anchor.target} rel="noreferrer">
+      <Wl text={anchor.text} textOptions={options && options} />
+    </a>
+  );
+};
