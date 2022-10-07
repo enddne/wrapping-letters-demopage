@@ -25,24 +25,20 @@ type PageContent = {
   description: string;
 };
 
+type ContentType = {
+  text?: string;
+  anchor?: { url: string; text: string; target: "_blank" | "" };
+  image?: { src: string; alt: string };
+
+  options?: WL;
+};
+
 type Content = {
   id: string;
   content: {
     tag: Tags;
-    text: string;
-    wlProps?: WL;
+    data: ContentType;
   }[];
 };
 
-type PropsContentComponent = Record<
-  "data",
-  {
-    text?: string;
-    anchor?: { url: string; text: string; target: "_blank" | "" };
-    image?: { src: string; alt: string };
-
-    options?: WL;
-  }
->;
-
-type ContentTextComponent = (props: PropsContentComponent) => JSX.Element;
+type ContentTextComponent = (props: ContentType) => JSX.Element;
