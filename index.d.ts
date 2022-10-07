@@ -34,11 +34,15 @@ type Content = {
   }[];
 };
 
-type DataContentComponent =
-  | string
-  | { url: string; text: string }
-  | { src: string; alt: string; target: "_blank" | "" };
+type PropsContentComponent = Record<
+  "data",
+  {
+    text?: string;
+    anchor?: { url: string; text: string; target: "_blank" | "" };
+    image?: { src: string; alt: string };
 
-type PropsContentComponent = { data: DataContentComponent; options: WL };
+    options?: WL;
+  }
+>;
 
 type ContentTextComponent = (props: PropsContentComponent) => JSX.Element;
