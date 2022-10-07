@@ -1,4 +1,4 @@
-import TagManager from "./tags";
+import TagManager from "./tags.manager";
 import { NotFound } from "pages/404";
 
 import styles from "@styles/docs/content.module.scss";
