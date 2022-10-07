@@ -1,4 +1,4 @@
-import { Content, PageContent } from "@common/type";
+import TagManager from "./tags";
 import { NotFound } from "pages/404";
 
 import styles from "@styles/docs/content.module.scss";
@@ -21,7 +21,7 @@ export function Main({
         </header>
         <section className={styles.content}>
           <h1>xd</h1>
-          {Object.entries(content).toString()}
+          <TagManager pageData={content} />
         </section>
         <nav className={styles.navigator}>
           <article>prev</article>
