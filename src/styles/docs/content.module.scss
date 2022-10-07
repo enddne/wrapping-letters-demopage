@@ -8,6 +8,10 @@
   h3,
   h4 {
     font-family: "Didot";
+
+    span {
+      font-family: inherit;
+    }
   }
 
   .content-container {
