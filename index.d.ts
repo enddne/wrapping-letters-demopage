@@ -9,14 +9,14 @@ type WL = {
   SelectClass?: {
     wordToSearch: SpecialArray;
     classToAdd: SpecialArray;
-    spaceBeetwenWord: boolean;
+    spaceBeetwenWord?: boolean;
   };
-  SpecialWrapp: {
+  SpecialWrapp?: {
     wordToSearch: SpecialArray;
     strucutureToAdd: SpecialArray;
   };
-  PerWord: boolean;
-  strucuture: function;
+  PerWord?: boolean;
+  strucuture?: function;
 };
 
 type PageContent = {
