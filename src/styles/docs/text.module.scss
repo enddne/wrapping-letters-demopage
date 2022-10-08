@@ -1,0 +1,9 @@
+.simple-code {
+  display: inline-block;
+  color: #ddd;
+
+  &::before,
+  &::after {
+    content: "`";
+  }
+}
