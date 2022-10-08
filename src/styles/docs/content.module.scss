@@ -36,6 +36,15 @@
     .content {
       p {
         margin-bottom: 45px;
+        .simple-code {
+          display: inline-block;
+          color: #ddd;
+
+          &::before,
+          &::after {
+            content: "`";
+          }
+        }
       }
     }
   }
