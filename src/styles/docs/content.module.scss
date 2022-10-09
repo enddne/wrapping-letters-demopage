@@ -22,7 +22,7 @@
 
     .header,
     .content {
-      background-color: #0001;
+      // background-color: #0001;
       margin-bottom: 100px;
     }
 
@@ -34,18 +34,7 @@
     }
 
     .content {
-      p {
-        margin-bottom: 45px;
-        .simple-code {
-          display: inline-block;
-          color: #ddd;
-
-          &::before,
-          &::after {
-            content: "`";
-          }
-        }
-      }
+      @import "text";
     }
   }
 }
