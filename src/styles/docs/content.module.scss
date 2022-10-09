@@ -29,7 +29,11 @@
     .header {
       h1 {
         font-size: 2rem;
-        margin-bottom: 45px;
+        margin-bottom: 20px;
+      }
+      p {
+        white-space: pre-wrap;
+        font-weight: 300;
       }
     }
 
