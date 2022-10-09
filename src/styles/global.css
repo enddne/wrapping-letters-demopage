@@ -1,6 +1,7 @@
 :root {
   font-size: 18px;
   --hover-color: rgb(157, 6, 94);
+  --text-code-color: #0c8cd4;
 }
 
 * {
