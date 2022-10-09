@@ -26,9 +26,22 @@ export const PageData: Record<ID, Content> = {
         },
       },
       {
-        tag: "p",
+        tag: "a",
         data: {
-          text: "You do can install wrapping letter in your projects with next comand line in your terminal",
+          anchor: {
+            url: "https://ttager.page/",
+            text: "Or do you can go to this link :3",
+            target: "_blank",
+          },
+          options: {
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "h3",
+        data: {
+          text: "This is a greate example",
         },
       },
     ],
