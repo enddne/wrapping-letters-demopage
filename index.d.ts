@@ -13,7 +13,7 @@ type WL = {
   };
   SpecialWrapp?: {
     wordToSearch: SpecialArray;
-    strucutureToAdd: SpecialArray;
+    strucutureToAdd: function | function[];
   };
   PerWord?: boolean;
   strucuture?: function;
