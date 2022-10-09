@@ -22,7 +22,7 @@ export const PageData: Record<ID, Content> = {
       {
         tag: "code",
         data: {
-          text: `$ npm install wrapping-letters-react owowowowo`,
+          text: `$ npm install wrapping-letters-react`,
         },
       },
       {
