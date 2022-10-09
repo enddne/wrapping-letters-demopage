@@ -1,11 +1,11 @@
-import { ID, PageContent } from "@common/type";
-
 export const Data: Record<ID, Record<ID, PageContent>> = {
   "Getting started": {
     "getting-started": {
       id: "getting-started",
       title: "Getting Started",
-      description: "Here you'll learn how to use Wrapping Letters",
+      description: `Wrapping Letters can you help in your animation in your projects on React, with a simple syntaxis to to reduce your code considerably!
+
+What are you waiting? start now :D`,
     },
     "best-pratice": {
       id: "best-pratice",
