@@ -23,10 +23,13 @@ p {
   }
 }
 
-.code--container {
-  width: 100vw;
+pre {
+  width: 100%;
   overflow-x: scroll;
   margin-bottom: 45px;
+  padding: 10px;
+  background-color: #fbf8f8;
+  border-radius: 10px;
 
   code {
     font-size: 0.95rem;
