@@ -8,7 +8,7 @@ export const PageData: Record<ID, Content> = {
       {
         tag: "p",
         data: {
-          text: "You do can install` wrapping letter in your projects with next comand line in your terminal",
+          text: "You do can install` Wrapping letters in your projects with the next command lines",
           options: {
             ClassToAdd: styles.text,
             SelectClass: {
@@ -26,22 +26,67 @@ export const PageData: Record<ID, Content> = {
         },
       },
       {
-        tag: "a",
+        tag: "code",
         data: {
-          anchor: {
-            url: "https://ttager.page/",
-            text: "Or do you can go to this link :3",
-            target: "_blank",
-          },
+          text: `$ yarn add wrapping-letters-react`,
+        },
+      },
+      {
+        tag: "h2",
+        data: {
+          text: "Initialization",
           options: {
             PerWord: true,
           },
         },
       },
       {
-        tag: "h3",
+        tag: "p",
         data: {
-          text: "This is a greate example",
+          text: "To use the component just do you need import` the its in add on your components",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: "import`",
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `import Wl from "wrapping-letters-react"
+          
+export default function MyComponentWithWl() {
+  return <Wl />
+}`,
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "Wrapping Letters has a default return is: Hello World!!! <3; You do can test with this text the options has the component",
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `// default return
+
+<span>H</span>
+<span>e</span>
+<span>l</span>
+<span>l</span>
+<span>o</span>
+//...`,
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "With this basic knowlets now do you can start to use Wrapping Letter, go to the next doc to know more the libra  ry",
         },
       },
     ],
