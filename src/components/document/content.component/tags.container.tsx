@@ -32,7 +32,7 @@ export const NoteElement: ContentTextComponent = ({ text }) => (
   </div>
 );
 export const CodeElement: ContentTextComponent = ({ text }) => (
-  <pre className={styles["note--container"]}>
+  <pre className={styles["code--container"]}>
     <code>{text}</code>
   </pre>
 );
