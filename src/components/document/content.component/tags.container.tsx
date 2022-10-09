@@ -44,7 +44,7 @@ export const AnchorElement: ContentTextComponent = ({
   if (anchor.target != "") {
     return (
       <Link href={anchor.url ? anchor.url : ""}>
-        <a>
+        <a className={styles["simple-link"]}>
           <Wl text={anchor.text} textOptions={options && options} />
         </a>
       </Link>
@@ -52,7 +52,12 @@ export const AnchorElement: ContentTextComponent = ({
   }
 
   return (
-    <a href={anchor.url} target={anchor.target} rel="noreferrer">
+    <a
+      href={anchor.url}
+      className={styles["simple-link"]}
+      target={anchor.target}
+      rel="noreferrer"
+    >
       <Wl text={anchor.text} textOptions={options && options} />
     </a>
   );
@@ -67,3 +72,20 @@ export const ImageElement: ContentTextComponent = ({ image }) => {
     </div>
   );
 };
+
+// --- tag for words ----
+// SpecialWrapp is not avalible with JSON .-.
+
+export const AnchorWord = ({
+  link,
+  letter,
+  cssClass,
+}: {
+  link: string;
+  letter?: string;
+  cssClass: string;
+}) => (
+  <a href={link} className={cssClass}>
+    {letter}
+  </a>
+);
