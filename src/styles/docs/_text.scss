@@ -1,0 +1,35 @@
+h2 {
+  margin-bottom: 35px;
+}
+h3 {
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 45px;
+  .text {
+    &.simple-code {
+      font-weight: 300;
+      color: var(--text-code-color);
+
+      &::before {
+        content: "`";
+      }
+    }
+
+    &.anchor {
+      font-style: italic;
+    }
+  }
+}
+
+.code--container {
+  width: 100vw;
+  overflow-x: scroll;
+  margin-bottom: 45px;
+
+  code {
+    font-size: 0.95rem;
+    font-family: "Fira Code";
+  }
+}
