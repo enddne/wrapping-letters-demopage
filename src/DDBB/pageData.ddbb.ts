@@ -8,14 +8,21 @@ export const PageData: Record<ID, Content> = {
       {
         tag: "p",
         data: {
-          text: "You do can install wrapping letter in your projects with next comand line in your terminal",
+          text: "You do can install` wrapping letter in your projects with next comand line in your terminal",
           options: {
+            ClassToAdd: styles.text,
             SelectClass: {
               classToAdd: styles["simple-code"],
-              wordToSearch: "install",
+              wordToSearch: "install`",
             },
             PerWord: true,
           },
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `$ npm install wrapping-letters-react owowowowo`,
         },
       },
       {
