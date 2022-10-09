@@ -1,4 +1,3 @@
-import { Content, ID, PageContent } from "@common/type";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { DocumentationTemplate } from "templates/docs";
 
