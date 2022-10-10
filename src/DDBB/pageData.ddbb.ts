@@ -25,12 +25,12 @@ export const PageData: Record<ID, Content> = {
           text: `$ npm install wrapping-letters-react`,
         },
       },
-      {
-        tag: "code",
-        data: {
-          text: `$ yarn add wrapping-letters-react`,
-        },
-      },
+      // {
+      //   tag: "code",
+      //   data: {
+      //     text: `$ yarn add wrapping-letters-react`,
+      //   },
+      // },
       {
         tag: "h2",
         data: {
@@ -67,7 +67,14 @@ export default function MyComponentWithWl() {
       {
         tag: "p",
         data: {
-          text: "Wrapping Letters has a default return is: Hello World!!! <3; You do can test with this text the options has the component",
+          text: 'Wrapping Letters has a default return is: "Hello World!!! <3", You do can test with this text the options has the component',
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: ['"Hello World!!! <3"'],
+              classToAdd: styles.italic,
+            },
+          },
         },
       },
       {
@@ -86,7 +93,10 @@ export default function MyComponentWithWl() {
       {
         tag: "p",
         data: {
-          text: "With this basic knowlets now do you can start to use Wrapping Letter, go to the next doc to know more the libra  ry",
+          text: "With this basic knowlets now do you can start to use Wrapping Letter, go to the next doc to know more the library!",
+          options: {
+            ClassToAdd: `${styles.text} ${styles.italic}`,
+          },
         },
       },
     ],
