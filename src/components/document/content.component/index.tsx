@@ -3,6 +3,7 @@ import NotFound from "pages/404";
 
 import styles from "@styles/docs/content.module.scss";
 import { ContentAppear } from "@common/appearContentAnimation";
+import { Nav } from "../nav.component";
 
 export function Main({
   currentHeader,
@@ -11,7 +12,7 @@ export function Main({
 }: {
   currentHeader: PageContent;
   content?: Content;
-  allHeaders?: Record<ID, PageContent>;
+  allHeaders?: Record<ID, Record<ID, PageContent>>;
 }) {
   if (!content) return <NotFound />;
 
@@ -31,10 +32,7 @@ export function Main({
         </section>
         <nav className={styles.navigator}>
           <ContentAppear>
-            <>
-              <article>prev</article>
-              <article>next</article>
-            </>
+            <Nav currentHeader={currentHeader} allHeaders={allHeaders} />
           </ContentAppear>
         </nav>
       </div>
