@@ -1,5 +1,5 @@
 import TagManager from "./tags.manager";
-import { NotFound } from "pages/404";
+import NotFound from "pages/404";
 
 import styles from "@styles/docs/content.module.scss";
 import { ContentAppear } from "@common/appearContentAnimation";
@@ -7,9 +7,11 @@ import { ContentAppear } from "@common/appearContentAnimation";
 export function Main({
   currentHeader,
   content,
+  allHeaders,
 }: {
   currentHeader: PageContent;
   content?: Content;
+  allHeaders?: Record<ID, PageContent>;
 }) {
   if (!content) return <NotFound />;
 
