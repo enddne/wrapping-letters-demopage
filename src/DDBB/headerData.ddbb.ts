@@ -7,17 +7,18 @@ export const Data: Record<ID, Record<ID, PageContent>> = {
 
 What are you waiting? start now :D`,
     },
-    "best-pratice": {
-      id: "best-pratice",
-      title: "Best Pratice",
-      description: "Here you'll learn how to use Wrapping Letters",
-    },
+    // "best-pratice": {
+    //   id: "best-pratice",
+    //   title: "Best Pratice",
+    //   description: "Here you'll learn how to use Wrapping Letters",
+    // },
   },
   "Component Syntaxis": {
     text: {
       id: "text",
-      title: "The most impotant props: text<string>",
-      description: "Here you'll learn how to use Wrapping Letters",
+      title: "text<string | string[]>",
+      description:
+        "The most important prop in at component, If do you want work with WL(Wrapping Letters), You do need know how work the prop: text",
     },
   },
 };
