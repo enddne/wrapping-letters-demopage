@@ -13,29 +13,42 @@ export function Nav({
   const filterElement = headerValues.find((el) => el.id === currentHeader.id);
 
   const currentHeaderIndex = headerValues.indexOf(filterElement as PageContent);
-  console.log(headerValues, currentHeader, currentHeaderIndex, filterElement);
 
-  const nextPost = headerValues[currentHeaderIndex + 1];
-  const previusPost = !(headerValues.length - 1 > 0)
-    ? headerValues[currentHeaderIndex - 1]
-    : headerValues[headerValues.length - 1];
+  const nextPost =
+    currentHeaderIndex + 1 > headerValues.length - 1
+      ? headerValues[0]
+      : headerValues[currentHeaderIndex + 1];
+
+  const previousPost =
+    currentHeaderIndex - 1 >= 0
+      ? headerValues[currentHeaderIndex - 1]
+      : headerValues[headerValues.length - 1];
 
   return (
     <section className={styles.container}>
-      <Link href={`/docs/${nextPost.id}`}>
-        <a className={styles["doc-container"]}>
-          <article>
-            <h1>{nextPost.title}</h1>
-          </article>
-        </a>
-      </Link>
-      <Link href={`/docs/${previusPost.id}`}>
-        <a className={styles["doc-container"]}>
-          <article>
-            <h1>{previusPost.title}</h1>
-          </article>
-        </a>
-      </Link>
+      <p>Take a look the next docs</p>
+      <div className={styles["content"]}>
+        <div className={styles["link-container"]}>
+          <Link href={`/docs/${previousPost.id}`}>
+            <a className={styles["doc-container"]}>
+              <article>
+                <span>previous</span>
+                <h1>{previousPost.title}</h1>
+              </article>
+            </a>
+          </Link>
+        </div>
+        <div className={styles["link-container"]}>
+          <Link href={`/docs/${nextPost.id}`}>
+            <a className={styles["doc-container"]}>
+              <article>
+                <span>next</span>
+                <h1>{nextPost.title}</h1>
+              </article>
+            </a>
+          </Link>
+        </div>
+      </div>
     </section>
   );
 }
