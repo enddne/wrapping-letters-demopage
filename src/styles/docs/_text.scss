@@ -7,6 +7,7 @@ h3 {
 
 p {
   margin-bottom: 45px;
+
   .text {
     &.simple-code {
       font-weight: 300;
@@ -15,6 +16,11 @@ p {
       &::before {
         content: "`";
       }
+    }
+
+    &.italic {
+      font-weight: 300;
+      font-style: italic;
     }
 
     &.anchor {
