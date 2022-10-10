@@ -101,8 +101,19 @@ export default function MyComponentWithWl() {
       },
     ],
   },
-  "best-pratice": {
-    id: "best-pratice",
-    content: [{ tag: "h2", data: { text: "Best Pratice" } }],
+  // "best-pratice": {
+  //   id: "best-pratice",
+  //   content: [{ tag: "h2", data: { text: "Best Pratice" } }],
+  // },
+  text: {
+    id: "text",
+    content: [
+      {
+        tag: "p",
+        data: {
+          text: "The most important prop on all component",
+        },
+      },
+    ],
   },
 };
