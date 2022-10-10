@@ -59,7 +59,7 @@ $anchorColor: #142bfe;
   position: fixed;
   opacity: 0;
   visibility: hidden;
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   padding-top: 60px;
   padding-left: 50px;
@@ -94,6 +94,7 @@ $anchorColor: #142bfe;
         a {
           position: relative;
           display: inline-block;
+          margin-bottom: 10px;
           font-style: italic;
           font-weight: 300;
           text-decoration: none;
@@ -132,9 +133,16 @@ $anchorColor: #142bfe;
 
 @media (min-width: 1024px) {
   .container {
-    position: relative;
+    position: sticky;
+    top: 0;
     padding-left: 30px;
     padding-right: 30px;
     width: 380px;
+    height: 100vh;
+
+    .content {
+      height: 100%;
+      overflow-y: auto;
+    }
   }
 }
