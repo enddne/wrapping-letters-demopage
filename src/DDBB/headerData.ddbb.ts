@@ -20,5 +20,11 @@ What are you waiting? start now :D`,
       description:
         "The most important prop in at component, If do you want work with WL(Wrapping Letters), You do need know how work the prop: text",
     },
+    textOptions: {
+      id: "textOptions",
+      title: "textOptions<object>",
+      description:
+        "If do you want make a customization your text, you need the prop textOptions for this job",
+    },
   },
 };
