@@ -111,9 +111,64 @@ export default function MyComponentWithWl() {
       {
         tag: "p",
         data: {
-          text: "The most important prop on all component",
+          text: "The prop text only can receive objects of type string, no matter how make the string",
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `<Wl text={new String("example string")} />
+
+<Wl text="example string" />
+
+<Wl text={data.title} />
+`,
+        },
+      },
+      {
+        tag: "h2",
+        data: {
+          text: "Error when you don't send a string on text",
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: `The code will eject a  Error\` but if you dont send nothing, the code will return a default string: Hello World!!! <3`,
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: ["Hello", "Error`", "World!!!", "<3", "string"],
+              classToAdd: [styles["italic"], styles["simple-code"]],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "This is the error will eject WL when you don't send a string`",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: "string`",
+              classToAdd: `${styles["italic"]} ${styles["simple-code"]}`,
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: "[Error] Error: text must be a string --- WrappingLetters (index.js:82)...",
         },
       },
     ],
+  },
+  textOptions: {
+    id: "textOptions",
+    content: [],
   },
 };
