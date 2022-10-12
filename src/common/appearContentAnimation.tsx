@@ -9,7 +9,11 @@ export function ContentAppear({ children }: { children: JSX.Element }) {
   const itemRef = useRef(null);
 
   function IOCB(entries: IntersectionObserverEntry[]): void {
-    if (entries[0].isIntersecting) setIsVisible(true);
+    if (entries[0].isIntersecting) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
     // else setIsVisible(false);
   }
 
