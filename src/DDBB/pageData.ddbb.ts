@@ -169,6 +169,73 @@ export default function MyComponentWithWl() {
   },
   textOptions: {
     id: "textOptions",
+    content: [
+      {
+        tag: "p",
+        data: {
+          text: 'textOptions` is the "main" prop, here you can create your customization for your text',
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: "textOptions`",
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "textOptions` can only receive one object for now",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: "textOptions`",
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `<WL text="your text" textOptions={{}}/>`,
+        },
+      },
+      {
+        tag: "note",
+        data: {
+          text: "if you put an empty object` on the prop, the component will return the elements with the default textOptions` configuration",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: ["object`", "textOptions`"],
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "note",
+        data: {
+          text: "textOptions` will send the same error of text if you don't send an object`",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: ["object`", "textOptions`"],
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+    ],
+  },
+  ClassToAdd: {
+    id: "ClassToAdd",
     content: [],
   },
 };

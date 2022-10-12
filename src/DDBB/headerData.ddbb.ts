@@ -26,5 +26,11 @@ What are you waiting? start now :D`,
       description:
         "If do you want make a customization your text, you need the prop textOptions for this job",
     },
+    ClassToAdd: {
+      id: "ClassToAdd",
+      title: "ClassToAdd<string>",
+      description:
+        "Set a default class on your elements with ClassToAdd, each element will receive the class that your put here",
+    },
   },
 };
