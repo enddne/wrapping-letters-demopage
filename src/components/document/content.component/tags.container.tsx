@@ -26,9 +26,11 @@ export const ParaElement: ContentTextComponent = ({ text = "", options }) => (
   </p>
 );
 
-export const NoteElement: ContentTextComponent = ({ text }) => (
+export const NoteElement: ContentTextComponent = ({ text, options }) => (
   <div className={styles["note--container"]}>
-    <p>{text}</p>
+    <p>
+      <Wl text={text} textOptions={options && options} />
+    </p>
   </div>
 );
 export const CodeElement: ContentTextComponent = ({ text }) => (
