@@ -236,6 +236,75 @@ export default function MyComponentWithWl() {
   },
   ClassToAdd: {
     id: "ClassToAdd",
-    content: [],
+    content: [
+      {
+        tag: "note",
+        data: {
+          text: "ClassToAdd` is an attribute of textOptions`",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: ["ClassToAdd`", "textOptions`"],
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: 'The attribute ClassToAdd` is the "default" class to add to each element, their default value is an empty string` and its only can receive one string`',
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: ["ClassToAdd`", "string`"],
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `<WL 
+  text="custom text"
+  textOptions={{ ClassToAdd: "common-class", }}
+/>`,
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "If do you want put more classes, you can use the => `` <= is simple, let's take a look the next example",
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `<WL 
+  text="custom text"
+  textOptions={{ 
+    ClassToAdd: \`common-class \${yourObject.attribute || yourVar}\`, 
+  }}
+/>`,
+        },
+      },
+      {
+        tag: "note",
+        data: {
+          text: "if you don't send a string` the component will return the same error of text`",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: ["text`", "string`"],
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+    ],
   },
 };
