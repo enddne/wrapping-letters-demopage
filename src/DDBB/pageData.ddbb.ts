@@ -307,4 +307,74 @@ export default function MyComponentWithWl() {
       },
     ],
   },
+  SelectClass: {
+    id: "SelectClass",
+    content: [
+      {
+        tag: "a",
+        data: {
+          anchor: {
+            url: `https://${url}/docs/specialArray/`,
+            text: "In this page you will see a new topic [special Array], click the link to go the documentation page",
+            target: "_blank",
+          },
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "SelectClass has three attributes to work your text: wordToSearch` classToAdd` and spaceBetweenWord`",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: [
+                "wordToSearch`",
+                "classToAdd`",
+                "spaceBetweenWord`",
+              ],
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: 'wordToSearch<string>` is the word to search for, but you can search for more word with an [specialArray]` these Arrays are called "special array"',
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: [
+                "wordToSearch<string>`",
+                '"special',
+                'array"',
+                "[specialArray]`",
+              ],
+              classToAdd: [styles["simple-code"], styles.italic, styles.italic],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "classToAdd<string>` is the class to add at element, You can add more classes with an [specialArray]`",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: [
+                "classToAdd<string>`",
+                "element,",
+                "[specialArray]`",
+              ],
+              classToAdd: [styles["simple-code"], styles.italic],
+            },
+            PerWord: true,
+          },
+        },
+      },
+    ],
+  },
 };
