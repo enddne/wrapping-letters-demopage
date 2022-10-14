@@ -314,7 +314,7 @@ export default function MyComponentWithWl() {
         tag: "a",
         data: {
           anchor: {
-            url: `https://${url}/docs/specialArray/`,
+            url: `https://${process.env.URL}/docs/specialArray/`,
             text: "In this page you will see a new topic [special Array], click the link to go the documentation page",
             target: "_blank",
           },
@@ -370,6 +370,48 @@ export default function MyComponentWithWl() {
                 "[specialArray]`",
               ],
               classToAdd: [styles["simple-code"], styles.italic],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "spaceBetweenWord<bolean>` is the a conditional for the search (default is false)",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: "spaceBetweenWord<bolean>`",
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: 'For example, wordToSearch` has the word "ping" but the algorithm can search for a word within other words and also being alone, spaceBetweenWord` in true only allows searching for the word alone, in false searches everywhere',
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: ["spaceBetweenWord`", '"ping"', "wordToSearch`"],
+              classToAdd: [styles["simple-code"], styles.italic],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "note",
+        data: {
+          text: "SelectClass` look for all the times the word is repeated, spaceBetweenWord` is important for avoiding problems",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: ["SelectClass`", "spaceBetweenWord`"],
+              classToAdd: [styles["simple-code"]],
             },
             PerWord: true,
           },
