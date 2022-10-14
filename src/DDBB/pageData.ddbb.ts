@@ -392,7 +392,7 @@ export default function MyComponentWithWl() {
       {
         tag: "p",
         data: {
-          text: 'For example, wordToSearch` has the word "ping" but the algorithm can search for a word within other words and also being alone, spaceBetweenWord` in true only allows searching for the word alone, in false searches everywhere',
+          text: 'For example, wordToSearch` has the word "example" but the algorithm can search for a word within other words and also being alone, spaceBetweenWord` in true only allows searching for the word alone, in false searches everywhere',
           options: {
             ClassToAdd: styles.text,
             SelectClass: {
@@ -401,6 +401,44 @@ export default function MyComponentWithWl() {
             },
             PerWord: true,
           },
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `text="this is an example, thisisanexample"
+
+textOptions={{
+  "SelectClass": {
+    wordToSearch: "example",
+    classToAdd: "class",
+    spaceBetweenWord: false,
+  }
+}}`,
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "this is the return",
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `<span> </span>
+<span class="class">e</span>
+<span class="class">x</span>
+<span class="class">a</span>
+<span class="class">m</span>
+//..
+
+<span>a</span>
+<span>n</span>
+<span class="class">e</span>
+<span class="class">x</span>
+<span class="class">a</span>
+<span class="class">m</span>`,
         },
       },
       {
