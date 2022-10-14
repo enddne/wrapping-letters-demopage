@@ -38,5 +38,15 @@ What are you waiting? start now :D`,
       description:
         "SelectClass is a object it can a search a word, phrase or letters in the sentence to make customizations in your text",
     },
+    PerWord: {
+      id: "PerWord",
+      title: "PerWord<bolean>",
+      description: "a",
+    },
+    SpecialWrapp: {
+      id: "SpecialWrapp",
+      title: "SpecialWrapp<object>",
+      description: "a",
+    },
   },
 };
