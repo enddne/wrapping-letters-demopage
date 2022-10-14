@@ -457,4 +457,65 @@ textOptions={{
       },
     ],
   },
+  PerWord: {
+    id: "PerWord",
+    content: [
+      {
+        tag: "p",
+        data: {
+          text: "Here is an example of how it can be used",
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `<WrappingLetters
+  text="Carlos is a good person, but Carlos is a bad person"
+  textOptions={{
+    ClassToAdd: "class",
+    SelectClass: {
+      wordToSearch: "Carlos",
+      classToAdd: "special-class",
+    },
+    PerWord: true,
+  }}
+/>`,
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "the return is:",
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `<span class="class special-class">Carlos </span>
+<span class="class">is </span>
+<span class="class">a </span>
+<span class="class">good </span>
+<span class="class">person, </span>
+//...`,
+        },
+      },
+      {
+        tag: "note",
+        data: {
+          text: `
+When PerWord is true, spaceBetweenWord\` always is disabled. wordToSearch\` must be a single word, spaces break the search.
+
+THE CODE SEARCH EACH WORD BY THE SPACE HAS BETWEEN EACH WORD`,
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: ["spaceBetweenWord`", "wordToSearch`"],
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+    ],
+  },
 };
