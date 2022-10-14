@@ -49,5 +49,10 @@ What are you waiting? start now :D`,
       title: "SpecialWrapp<object>",
       description: "a",
     },
+    strucuture: {
+      id: "structure",
+      title: "structure<function>",
+      description: "a",
+    },
   },
 };
