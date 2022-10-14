@@ -41,7 +41,8 @@ What are you waiting? start now :D`,
     PerWord: {
       id: "PerWord",
       title: "PerWord<bolean>",
-      description: "a",
+      description:
+        "PerWord is an attribute of textOptions to wrap each word instead of wrapping each letter (default is false)",
     },
     SpecialWrapp: {
       id: "SpecialWrapp",
