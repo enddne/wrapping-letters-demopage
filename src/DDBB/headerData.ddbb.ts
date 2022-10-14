@@ -32,5 +32,11 @@ What are you waiting? start now :D`,
       description:
         "Set a default class on your elements with ClassToAdd, each element will receive the class that your put here",
     },
+    SelectClass: {
+      id: "SelectClass",
+      title: "SelectClass<object>",
+      description:
+        "SelectClass is a object it can a search a word, phrase or letters in the sentence to make customizations in your text",
+    },
   },
 };
