@@ -463,6 +463,12 @@ textOptions={{
       {
         tag: "p",
         data: {
+          text: "Sometimes we need to separate word by word for animation, styles, labels, etc. The PerWord attribute separates each element with a word thanks to the white spaces in its text",
+        },
+      },
+      {
+        tag: "p",
+        data: {
           text: "Here is an example of how it can be used",
         },
       },
