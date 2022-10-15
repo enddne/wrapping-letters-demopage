@@ -524,4 +524,8 @@ THE CODE SEARCH EACH WORD BY THE SPACE HAS BETWEEN EACH WORD`,
       },
     ],
   },
+  SpecialWrapp: {
+    id: "SpecialWrapp",
+    content: [],
+  },
 };
