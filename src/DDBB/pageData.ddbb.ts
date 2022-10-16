@@ -744,4 +744,302 @@ textOptions={{
       },
     ],
   },
+  structure: {
+    id: "structure",
+    content: [
+      {
+        tag: "p",
+        data: {
+          text: "It is simple to use, this accessory only receives one function/component, let's take a look the example",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: "structure`",
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `function App(){
+  return(
+    <WrappingLetters
+      text='This is the sentence to wrapped'
+      textOptions={{
+        SelectClass: {
+            wordToSearch: 'sentence',
+            ClassToAdd: 'specialClass',
+            spaceBeetwenWord: true,,
+        },
+      }}
+      structure={ReactComponent}
+    />
+  )
+}`,
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "structure` is a prop that modify the wrapper for more flexibility to do animations or whatever you can think of.",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: "structure`",
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `function ReactComponent({ letter, cssClass }) {
+  return (
+    <div className={\`container-letter \${cssClass}\`}>
+      <span className="letter-wrapp">{letter}</span>
+    </div>
+  );
+}`,
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "Well get this problem, Do you have a struture` in your component, but how do You can put the SpecialWrapp` ? well is simple.",
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "The component on structure receives a prop called specialWrapp`, lets take a look the next example to how use the prop:",
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: 'Now your custom structure will receive the prop specialWrapp` With this prop do you can comprobate if the text has a "specialWrapp"',
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: ["specialWrapp`", '"specialWrapp"'],
+              classToAdd: [styles["simple-code"], styles.italic],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `function customStrucuture({ letter, cssClass, specialWrapp }) {
+  // specialWrapp is an object with this attribute.
+  const { hasCustomWrapp, NewWrappStructure } = specialWrapp;
+    
+  return //...
+}`,
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: 'here will declare the components to the comprobation the "Default" component, when the hasCustomWrapp` is false this is will returned',
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: ["hasCustomWrapp`", '"Default"'],
+              classToAdd: [styles["simple-code"], styles.italic],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `const Default = ({ letter, cssClass }) => (
+  <div className="container">
+    <span className={cssClass}>{letter}</span>
+  </div>
+);`,
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "When hasCustomWrapp` is true this is the return NewWrappStructure` will pass to be the custom wrapp",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: [
+                "NewWrappStructure`",
+                "custom",
+                "wrapp",
+                "hasCustomWrapp`",
+              ],
+              classToAdd: [styles["simple-code"], styles.italic, styles.italic],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `const CustomComponent = ({ letter, cssClass }) => (
+  <div className="container">
+    // I have been error when I don't put this comprobation 
+    // because "NewWrappStrucuture" is undefined 
+    // when hasCustomWrapp is false.
+    {
+      hasCustomWrapp && 
+        <NewWrappStructure letter={letter} cssClass={cssClass} />
+    }
+  </div>
+);`,
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "Now You do will make the comprobation with your another params or it can be like this",
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `
+  return hasCustomWrapp ? (
+    <CustomComponent letter={letter} cssClass={cssClass} />
+  ) : (
+    <Default letter={letter} cssClass={cssClass} />
+  );
+}`,
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "end of the example",
+          options: {
+            ClassToAdd: `${styles.text} ${styles.italic}`,
+          },
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "The list of element to send a the component for now is small:",
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "letter` is the letter to wrap",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: "letter`",
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "cssClass` is the matching CSS class",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: "cssClass`",
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "specialWrapp` this attribute is explaining in the next section",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: "specialWrapp`",
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "index` yeah, the index is now available.",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: "index`",
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "note",
+        data: {
+          text: "!IMPORTANT The key is assigned automatically in the component",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: "!IMPORTANT",
+              classToAdd: styles["italic"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "key` is the key :3 ('{wrappedElement}'-{indexNumber})",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: "key`",
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "note",
+        data: {
+          text: "!IMPORTANT The ClassToAdd` attribute of textOptions` is disable when the structure` is active, if you want a css class use className` in the component.",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: [
+                "ClassToAdd`",
+                "!IMPORTANT",
+                "textOptions`",
+                "structure`",
+                "className`",
+              ],
+              classToAdd: [styles["simple-code"], styles.italic],
+            },
+            PerWord: true,
+          },
+        },
+      },
+    ],
+  },
 };
