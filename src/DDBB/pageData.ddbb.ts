@@ -1042,4 +1042,65 @@ textOptions={{
       },
     ],
   },
+  specialArray: {
+    id: "specialArray",
+    content: [
+      {
+        tag: "p",
+        data: {
+          text: "Its syntax is very easy, only you need change the string to an Array of strings, look at this example",
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "You put 3 words to search",
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `wordToSearch: ["cheese", "rice", "eggs"]`,
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "the code will select the index of the word and will check what the class is in the array",
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `classToAdd: ["class-1", "class-2"]`,
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "if the index of the word is greater than that of the length of the array of specialClass, it'll select the first class.",
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `return
+  // PerWord: true
+  <span class="class-1">cheese </span>
+  <span class="class-2">rice </span>
+  <span class="class-1">eggs</span>
+`,
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "This example is avalible in any attribute/prop that suport [special Array]",
+          options: {
+            ClassToAdd: `${styles.text} ${styles.italic}`,
+          },
+        },
+      },
+    ],
+  },
 };
