@@ -57,4 +57,11 @@ What are you waiting? start now :D`,
         "Sometimes a special structure is needed for the letters or words to be wrapped, structure is the solution of this problem.",
     },
   },
+  Features: {
+    specialArray: {
+      id: "specialArray",
+      title: "[special Array]",
+      description: "Find more words, phrases or letter with an Array",
+    },
+  },
 };
