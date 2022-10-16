@@ -46,7 +46,7 @@ What are you waiting? start now :D`,
     },
     SpecialWrapp: {
       id: "SpecialWrapp",
-      title: "SpecialWrapp<object>",
+      title: "SpecialWrapp <object>",
       description:
         "If do you need a specific wrap to a specific word/letter, SpecialWrapp is the solution to this problem, send a react component to mutate the special element to add custom modifications",
     },
