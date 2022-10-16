@@ -9,10 +9,10 @@ export default function GettingStarted({ DATA }) {
   return "a";
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  const DATA = await fetch(`${process.env.API}/docs`).then((data) =>
-    data.json()
-  );
+// export const getStaticProps: GetStaticProps = async () => {
+//   const DATA = await fetch(`${process.env.API}/docs`).then((data) =>
+//     data.json()
+//   );
 
-  return { props: { DATA } };
-};
+//   return { props: { DATA } };
+// };

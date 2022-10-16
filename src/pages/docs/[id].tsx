@@ -18,7 +18,7 @@ export default function SearchDocs({
     />
   );
 }
-
+/*
 export const getStaticPaths: GetStaticPaths = async () => {
   const generalRes = await fetch(`${process.env.API}/docs`);
   const contentRes = await fetch(`${process.env.API}/docs/content/`);
@@ -62,3 +62,4 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return { props: { HEADER_JSON, allHeaders, CONTENT_JSON } };
 };
+*/
