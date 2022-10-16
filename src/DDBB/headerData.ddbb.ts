@@ -50,10 +50,11 @@ What are you waiting? start now :D`,
       description:
         "If do you need a specific wrap to a specific word/letter, SpecialWrapp is the solution to this problem, send a react component to mutate the special element to add custom modifications",
     },
-    strucuture: {
+    structure: {
       id: "structure",
       title: "structure<function>",
-      description: "a",
+      description:
+        "Sometimes a special structure is needed for the letters or words to be wrapped, structure is the solution of this problem.",
     },
   },
 };
