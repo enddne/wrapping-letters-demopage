@@ -526,6 +526,222 @@ THE CODE SEARCH EACH WORD BY THE SPACE HAS BETWEEN EACH WORD`,
   },
   SpecialWrapp: {
     id: "SpecialWrapp",
-    content: [],
+    content: [
+      {
+        tag: "a",
+        data: {
+          anchor: {
+            url: `https://${process.env.URL}/docs/specialArray/`,
+            text: "This attribute has support with [special Array] click the link to go its docs",
+            target: "_blank",
+          },
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "This attribute has the same functionality of SelectClass` are very similar. The atribute will find the words in the text for to add a specialWrapp",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: "SelectClass`",
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `<Wl
+  text="This is a short sentence"
+  textOptions={{
+      SpecialWrapp: {
+          wordToSearch: ["short", "is", "This"],
+          structureToAdd: [specialTag, specialTag1],
+      },
+  }}
+/>`,
+        },
+      },
+      {
+        tag: "note",
+        data: {
+          text: "SpecialWrapp` has support with [special Array]",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: "SpecialWrapp`",
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "The components on structureToAdd` will revice 2 props: letter` and cssClass`",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: ["letter`", "structureToAdd`", "cssClass`"],
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "letter` is the text to wrap, this prop content depend of PerWord",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: ["letter`"],
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "cssClass` is the the custom class from SelectClass` if the text has a same match with SelectClass` this cssClass` will recive the class of this match",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: ["cssClass`", "SelectClass`"],
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "cssClass` is the the custom class from SelectClass` if the text has a same match with SelectClass` this cssClass` will recive the class of this match",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: ["cssClass`", "SelectClass`"],
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "Here an example of an component to the wrap",
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `function specialTag({ letter, cssClass }) {
+  return (
+    <div className={\`example-class \${cssClass}\`}>
+      <a
+        className={\`another example-class\`}
+        href="//..."
+      >
+        {letter}
+      </a>
+    </div>
+  )
+}`,
+        },
+      },
+      {
+        tag: "note",
+        data: {
+          text: "!IMPORTANT The component has priority in the SelectClass` for example:",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: "SelectClass`",
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "You have this code:",
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `text="This is an apple 🍎 :3"
+
+textOptions={{
+  SelectClass: {
+    wordToSearch: ["a", "apple"],
+    classToAdd: "class"
+  },
+  SpecialWrapp: {
+    wordToSearch: "an",
+    structureToAdd: specialWrapp
+  }
+  spaceBetweenWord: false,
+}}`,
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "This is the return:",
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `//...
+<span>i</span>
+<span>s</span>
+<span> </span>
+<span class="class">a</span>
+<span class="">n</span>
+//...`,
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: 'The code first will iterate the SelectClass` after the SpecialWrapp` The code sintaxis will work with the letter and then remove it, In this example the next letter is "n" so no SpecialWrapp is added',
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: ["SelectClass`", "SpecialWrapp`"],
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "To avoid this priority you can use spaceBetweenWord: true, the code will check if the wordToSerch from SelectClass` is between white-space",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: ["SelectClass`", "SpecialWrapp`"],
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+    ],
   },
 };
