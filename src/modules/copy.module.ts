@@ -1,5 +1,5 @@
-export function copy(ref: { current: any }) {
-  var range = document.createRange(),
+export function copy(ref: { current: unknown }) {
+  const range = document.createRange(),
     selection = window.getSelection(),
     contentHolder = ref.current;
 

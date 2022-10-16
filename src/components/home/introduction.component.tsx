@@ -4,7 +4,7 @@ import { copy } from "@modules/copy.module";
 import { GithubAnchor } from "@common/github.link";
 import Wrapping from "wrapping-letters-react";
 
-const styles = require("@styles/home/content.module.scss");
+import styles from "@styles/home/content.module.scss";
 
 export function Intrduction() {
   const copyButtonRef = useRef(null);

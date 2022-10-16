@@ -1,7 +1,7 @@
 import WL from "wrapping-letters-react";
 import { ContentAppear } from "@common/appearContentAnimation";
 
-const styles = require("@styles/home/content.module.scss");
+import styles from "@styles/home/content.module.scss";
 
 export function DemoContent() {
   const wordsToSearch: string[] = ["Wrapping", "Letters"];

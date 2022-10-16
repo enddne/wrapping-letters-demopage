@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const styles = require("@styles/home/navbar.module.scss");
+import styles from "@styles/home/navbar.module.scss";
 
 export function Navbar() {
   return (

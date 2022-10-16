@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { ID, PageContent } from "@common/type";
 import { GithubAnchor } from "@common/github.link";
 import Link from "next/link";
 
@@ -12,12 +11,12 @@ export function Aside({
   currentHeader: PageContent;
   allHeaders: Record<ID, Record<ID, PageContent>>;
 }) {
-  let [isMobile, setIsMobile] = useState(true);
-  let [openMenu, setOpenMenu] = useState(false);
-  let entriesArray = Object.entries(allHeaders);
+  const [isMobile, setIsMobile] = useState(true);
+  const [openMenu, setOpenMenu] = useState(false);
+  const entriesArray = Object.entries(allHeaders);
 
   useEffect(function () {
-    let resizing = () => {
+    const resizing = () => {
       if (window.innerWidth < 1024) {
         setIsMobile(true);
         setOpenMenu(false);

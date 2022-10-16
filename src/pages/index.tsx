@@ -3,7 +3,7 @@ import { Intrduction } from "@components/home/introduction.component";
 import { Navbar } from "@components/home/navbar.component";
 import { WlSlider } from "@components/home/wl-slider.component";
 
-const styles = require("@styles/home/index.module.scss");
+import styles from "@styles/home/index.module.scss";
 
 export default function Home() {
   return (

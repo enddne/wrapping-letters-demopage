@@ -1,8 +1,4 @@
-import { ID, PageContent, Content } from "@common/type";
-
 export class DataManager {
-  constructor() {}
-
   getDataByID(
     headers: Record<ID, PageContent> | Record<ID, Content> | undefined,
     id: string
