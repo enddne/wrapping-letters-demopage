@@ -728,6 +728,15 @@ textOptions={{
           },
         },
       },
+      {
+        tag: "p",
+        data: {
+          text: `Buuuuuut..... You want send custom props to the special component, well you can send the custom props adding an object on "structureToAdd"`,
+          options: {
+            ClassToAdd: `${styles.text} ${styles.italic}`,
+          },
+        },
+      },
     ],
   },
   structure: {
