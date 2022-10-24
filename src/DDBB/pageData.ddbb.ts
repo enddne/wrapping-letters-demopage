@@ -624,20 +624,6 @@ THE CODE SEARCH EACH WORD BY THE SPACE HAS BETWEEN EACH WORD`,
       {
         tag: "p",
         data: {
-          text: "cssClass` is the the custom class from SelectClass` if the text has a same match with SelectClass` this cssClass` will recive the class of this match",
-          options: {
-            ClassToAdd: styles.text,
-            SelectClass: {
-              wordToSearch: ["cssClass`", "SelectClass`"],
-              classToAdd: styles["simple-code"],
-            },
-            PerWord: true,
-          },
-        },
-      },
-      {
-        tag: "p",
-        data: {
           text: "Here an example of an component to the wrap",
         },
       },
