@@ -1174,9 +1174,70 @@ textOptions={{
     id: "props",
     content: [
       {
+        tag: "a",
+        data: {
+          anchor: {
+            url: `${process.env.URL}/docs/specialArray/`,
+            text: "This feature is available with [special Array], click this link to go to its documentation page",
+            target: "_blank",
+          },
+        },
+      },
+      {
         tag: "p",
         data: {
-          text: "a",
+          text: "This feature help you to add custom props` to your components with a simple syntax, You just need change the element will receive props` to an Object`, let's take a look the next example",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: ["props`", "Object`,"],
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `{
+  "name of the element that has been changed": component,
+  props: {
+    // your props
+  }
+}`,
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "The name of the attribute that has the component as its value has the same name as the Object` that contains it. for example",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              classToAdd: styles["simple-code"],
+              wordToSearch: "Object`",
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `// This object is from SpecialWrapps 
+structureToAdd: {
+  structureToAdd: yourComponent,
+  props: {
+    // your props
+  }
+}`,
+        },
+      },
+      {
+        tag: "note",
+        data: {
+          text: "Changes to props don't cause the component to re-render",
         },
       },
     ],
