@@ -1072,6 +1072,41 @@ textOptions={{
           },
         },
       },
+      {
+        tag: "a",
+        data: {
+          anchor: {
+            url: "",
+            text: `structure is available with the feature {props}, click this link to go the documentation page if you want know more about the feature`,
+            target: "_blank",
+          },
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "It's very easy to use, You just need change the structure` to an Object` with the following attributes: structure` and props`",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              classToAdd: styles["simple-code"],
+              wordToSearch: ["structure`", "Object`", "props`"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `structure={{
+  structure: ReactComponent,
+  props: {
+    // your custom props
+  }
+}}`,
+        },
+      },
     ],
   },
   specialArray: {
@@ -1131,6 +1166,17 @@ textOptions={{
           options: {
             ClassToAdd: `${styles.text} ${styles.italic}`,
           },
+        },
+      },
+    ],
+  },
+  props: {
+    id: "props",
+    content: [
+      {
+        tag: "p",
+        data: {
+          text: "a",
         },
       },
     ],
