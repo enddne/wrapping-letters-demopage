@@ -63,5 +63,11 @@ What are you waiting? start now :D`,
       title: "[special Array]",
       description: "Find more words, phrases or letter with an Array",
     },
+    props: {
+      id: "props",
+      title: "{props}",
+      description:
+        "Send any custom props to your components and perfom any interaction with your props",
+    },
   },
 };
