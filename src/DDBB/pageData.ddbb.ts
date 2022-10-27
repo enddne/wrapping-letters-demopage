@@ -624,20 +624,6 @@ THE CODE SEARCH EACH WORD BY THE SPACE HAS BETWEEN EACH WORD`,
       {
         tag: "p",
         data: {
-          text: "cssClass` is the the custom class from SelectClass` if the text has a same match with SelectClass` this cssClass` will recive the class of this match",
-          options: {
-            ClassToAdd: styles.text,
-            SelectClass: {
-              wordToSearch: ["cssClass`", "SelectClass`"],
-              classToAdd: styles["simple-code"],
-            },
-            PerWord: true,
-          },
-        },
-      },
-      {
-        tag: "p",
-        data: {
           text: "Here an example of an component to the wrap",
         },
       },
@@ -736,6 +722,52 @@ textOptions={{
             ClassToAdd: styles.text,
             SelectClass: {
               wordToSearch: ["SelectClass`", "SpecialWrapp`"],
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "a",
+        data: {
+          anchor: {
+            url: "",
+            text: `SpecialWrapp is available with the feature {props}, click this link to go the documentation page if you want know more about the feature`,
+            target: "_blank",
+          },
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "It's very easy, you just need to change the function to an object` with the following attributes: structureToAdd` and props`",
+          options: {
+            ClassToAdd: `${styles.text}`,
+            SelectClass: {
+              wordToSearch: ["object`", "structureToAdd`", "props`"],
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `SpecialWrapp: {
+  wordToSearch: ["Text", "example"],
+  structureToAdd: {
+    structureToAdd: yourCustomComponent,
+    props: {
+      // your customs props
+    }
+  }
+}`,
+          options: {
+            ClassToAdd: `${styles.text}`,
+            SelectClass: {
+              wordToSearch: ["object`", "structureToAdd`", "props`"],
               classToAdd: styles["simple-code"],
             },
             PerWord: true,
@@ -1040,6 +1072,41 @@ textOptions={{
           },
         },
       },
+      {
+        tag: "a",
+        data: {
+          anchor: {
+            url: "",
+            text: `structure is available with the feature {props}, click this link to go the documentation page if you want know more about the feature`,
+            target: "_blank",
+          },
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "It's very easy to use, You just need change the structure` to an Object` with the following attributes: structure` and props`",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              classToAdd: styles["simple-code"],
+              wordToSearch: ["structure`", "Object`", "props`"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `structure={{
+  structure: ReactComponent,
+  props: {
+    // your custom props
+  }
+}}`,
+        },
+      },
     ],
   },
   specialArray: {
@@ -1099,6 +1166,78 @@ textOptions={{
           options: {
             ClassToAdd: `${styles.text} ${styles.italic}`,
           },
+        },
+      },
+    ],
+  },
+  props: {
+    id: "props",
+    content: [
+      {
+        tag: "a",
+        data: {
+          anchor: {
+            url: `${process.env.URL}/docs/specialArray/`,
+            text: "This feature is available with [special Array], click this link to go to its documentation page",
+            target: "_blank",
+          },
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "This feature help you to add custom props` to your components with a simple syntax, You just need change the element will receive props` to an Object`, let's take a look the next example",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              wordToSearch: ["props`", "Object`,"],
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `{
+  "name of the element that has been changed": component,
+  props: {
+    // your props
+  }
+}`,
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "The name of the attribute that has the component as its value has the same name as the Object` that contains it. for example",
+          options: {
+            ClassToAdd: styles.text,
+            SelectClass: {
+              classToAdd: styles["simple-code"],
+              wordToSearch: "Object`",
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `// This object is from SpecialWrapps 
+structureToAdd: {
+  structureToAdd: yourComponent,
+  props: {
+    // your props
+  }
+}`,
+        },
+      },
+      {
+        tag: "note",
+        data: {
+          text: "Changes to props don't cause the component to re-render",
         },
       },
     ],
