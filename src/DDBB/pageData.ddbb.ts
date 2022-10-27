@@ -729,11 +729,48 @@ textOptions={{
         },
       },
       {
+        tag: "a",
+        data: {
+          anchor: {
+            url: "",
+            text: `SpecialWrapp is available with the feature {props}, click this link to go the documentation page if you want know more about the feature`,
+            target: "_blank",
+          },
+        },
+      },
+      {
         tag: "p",
         data: {
-          text: `Buuuuuut..... You want send custom props to the special component, well you can send the custom props adding an object on "structureToAdd"`,
+          text: "It's very easy, you just need to change the function to an object` with the following attributes: structureToAdd` and props`",
           options: {
-            ClassToAdd: `${styles.text} ${styles.italic}`,
+            ClassToAdd: `${styles.text}`,
+            SelectClass: {
+              wordToSearch: ["object`", "structureToAdd`", "props`"],
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
+          },
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `SpecialWrapp: {
+  wordToSearch: ["Text", "example"],
+  structureToAdd: {
+    structureToAdd: yourCustomComponent,
+    props: {
+      // your customs props
+    }
+  }
+}`,
+          options: {
+            ClassToAdd: `${styles.text}`,
+            SelectClass: {
+              wordToSearch: ["object`", "structureToAdd`", "props`"],
+              classToAdd: styles["simple-code"],
+            },
+            PerWord: true,
           },
         },
       },
