@@ -1162,7 +1162,45 @@ textOptions={{
       {
         tag: "p",
         data: {
-          text: "This example is avalible in any attribute/prop that suport [special Array]",
+          text: "sometimes you do need add a loot of word(letters, phrases... xd) with an only class, well you can stacks the strings in an Array and this array will be an the receptor to the class in their index",
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "look this example:",
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `wordToSearch: [["this", "is"], "the", ["new", "feature"]],
+classToAdd: ["hahahah", "cool", "right?"],`,
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "the return is:",
+        },
+      },
+      {
+        tag: "code",
+        data: {
+          text: `<span class="hahahah">this</span>
+<span class="hahahah">is</span>
+<span class="cool">the</span>
+<span class="right?">new</span>
+<span class="right?">feature</span>
+
+// PerWord: true,
+`,
+        },
+      },
+      {
+        tag: "p",
+        data: {
+          text: "This examples is avalible in any attribute/prop that suport [special Array]",
           options: {
             ClassToAdd: `${styles.text} ${styles.italic}`,
           },
