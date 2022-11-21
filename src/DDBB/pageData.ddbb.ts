@@ -560,6 +560,7 @@ THE CODE SEARCH EACH WORD BY THE SPACE HAS BETWEEN EACH WORD`,
       SpecialWrapp: {
           wordToSearch: ["short", "is", "This"],
           structureToAdd: [specialTag, specialTag1],
+          spaceBetweenWord: false,
       },
   }}
 />`,
@@ -678,7 +679,6 @@ textOptions={{
     wordToSearch: "an",
     structureToAdd: specialWrapp
   }
-  spaceBetweenWord: false,
 }}`,
         },
       },
